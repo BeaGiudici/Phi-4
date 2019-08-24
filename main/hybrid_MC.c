@@ -7,7 +7,7 @@
 *
 * AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
 * CREATED: 30/05/2019
-* MODIFIED: 10/08/2019
+* MODIFIED: 24/08/2019
 *
 *******************************************************************************/
 
@@ -29,12 +29,13 @@ int main(int argc, char *argv[])
     /*Declaring the variables */
     int j, accepted, k; /*Counters*/
     double dTAU;        /*Infinitesimal time interval*/
-    double *dH, deltaH, mean_H = 0.0, err_H;
-    double *expo, mean_expo = 0.0, err_expo;
-    double *mag2, mean_m2 = 0.0, err_m2;
-    double *mag, mean_m = 0.0, err_m;
+    double *dH, deltaH, mean_H = 0.0, mean2_H = 0.0, err_H;
+    double *expo, mean_expo = 0.0, mean2_expo = 0.0, err_expo;
+    double *mag2, mean_m2 = 0.0, mean2_m2 = 0.0, err_m2;
+    double *mag, mean_m = 0.0, mean2_m = 0.0, err_m;
     int nBin; /*Number of bins after the rebinning*/
 
+    /*See if the right number of argument is passed in the command line*/
     if (argc != 2)
     {
         fprintf(stderr, "Number of arguments not correct\n");
@@ -42,13 +43,16 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    read_input(argv[1]); /*reading the parameters*/
+    /*Reading the parameters*/
+    read_input(argv[1]);
 
+    /*Initializing the generator of random numbers and the matrix hop[][]*/
     rlxd_init(1, seed);
     hopping(hop);
 
     accepted = hmc_params.ntraj; /*This variable keeps track of the accepted configuration 
                                     and its value decreases every time the configuration is not accepted*/
+
     dTAU = (double)hmc_params.tlength / hmc_params.nstep;
 
     /*Initializing the rebinned vector*/
@@ -64,7 +68,7 @@ int main(int argc, char *argv[])
 
     thermalization(dTAU);
 
-    /*Setting to zero the counter used for the rebinning */
+    /*Setting to zero the counter used for the rebinning*/
     k = 0;
 
     for (j = 0; j < hmc_params.ntraj; j++)
@@ -72,14 +76,24 @@ int main(int argc, char *argv[])
         if (!MolDyn(dTAU, &deltaH))
             accepted--;
 
-        /*Rebinning*/
+        /*Rebinning: if the index of the loop exceeded the length of a bin,
+        the counter k moves to the next one*/
         if (j - k * DBIN > DBIN)
         {
+            /*Computing the mean and the mean of the squares*/
             mean_m += mag[k] / nBin;
             mean_m2 += mag2[k] / nBin;
             mean_expo += expo[k] / nBin;
             mean_H += dH[k] / nBin;
+            mean2_m += mag[k] * mag[k] / nBin;
+            mean2_m2 += mag2[k] * mag2[k] / nBin;
+            mean2_expo += expo[k] * expo[k] / nBin;
+            mean2_H += dH[k] * dH[k] / nBin;
+
+            /*Update the counter*/
             k++;
+
+            /*Setting the new entries to zero*/
             mag[k] = 0.0;
             mag2[k] = 0.0;
             dH[k] = 0.0;
@@ -91,16 +105,14 @@ int main(int argc, char *argv[])
         expo[k] += exp(-1. * deltaH) / DBIN;
     }
 
-    /*Using jackknife to find the errors*/
-    clustering(mag, mean_m, nBin);
-    clustering(mag2, mean_m2, nBin);
-    clustering(dH, mean_H, nBin);
-    clustering(expo, mean_expo, nBin);
-    err_m = error_jack(mag, mean_m, nBin);
-    err_m2 = error_jack(mag2, mean_m2, nBin);
-    err_H = error_jack(dH, mean_H, nBin);
-    err_expo = error_jack(expo, mean_expo, nBin);
+    /*Estimating the errors*/
+    err_m = sqrt((mean2_m - mean_m * mean_m) / nBin);
+    err_m2 = sqrt((mean2_m2 - mean_m2 * mean_m2) / nBin);
+    err_expo = sqrt((mean2_expo - mean_expo * mean_expo) / nBin);
+    err_H = sqrt((mean2_H - mean_H * mean_H) / nBin);
 
+    /*Printing all the results (this particular formatting is useful to write 
+    the .json file in the final simulation)*/
     fprintf(stdout, "\t\"L\" : %i,\n", L);
     fprintf(stdout, "\t\"nStep\" : %i,\n", hmc_params.nstep);
     fprintf(stdout, "\t\"acceptance\" : %f,\n", (double)accepted / hmc_params.ntraj);
