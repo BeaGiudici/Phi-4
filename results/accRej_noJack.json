@@ -1,0 +1,614 @@
+[
+	{
+		"L": 4,
+		"nStep": 10,
+		"acceptance": 0.938208,
+		"magnetization": {
+			"val": 0.182776,
+			"err": 0.000816
+		},
+		"deltaH": {
+			"val": 0.123721,
+			"err": 0.003133
+		},
+		"exp": {
+			"val": 1.000008,
+			"err": 0.000159
+		}
+	},
+	{
+		"L": 4,
+		"nStep": 15,
+		"acceptance": 0.972937,
+		"magnetization": {
+			"val": 0.183048,
+			"err": 0.000809
+		},
+		"deltaH": {
+			"val": 0.054047,
+			"err": 0.001365
+		},
+		"exp": {
+			"val": 0.999949,
+			"err": 0.000069
+		}
+	},
+	{
+		"L": 4,
+		"nStep": 20,
+		"acceptance": 0.984808,
+		"magnetization": {
+			"val": 0.183014,
+			"err": 0.000785
+		},
+		"deltaH": {
+			"val": 0.030241,
+			"err": 0.000763
+		},
+		"exp": {
+			"val": 1.000045,
+			"err": 0.000039
+		}
+	},
+	{
+		"L": 4,
+		"nStep": 25,
+		"acceptance": 0.990344,
+		"magnetization": {
+			"val": 0.183514,
+			"err": 0.000799
+		},
+		"deltaH": {
+			"val": 0.019304,
+			"err": 0.000488
+		},
+		"exp": {
+			"val": 0.999989,
+			"err": 0.000025
+		}
+	},
+	{
+		"L": 4,
+		"nStep": 30,
+		"acceptance": 0.993327,
+		"magnetization": {
+			"val": 0.182760,
+			"err": 0.000791
+		},
+		"deltaH": {
+			"val": 0.013386,
+			"err": 0.000338
+		},
+		"exp": {
+			"val": 1.000006,
+			"err": 0.000017
+		}
+	},
+	{
+		"L": 4,
+		"nStep": 35,
+		"acceptance": 0.995208,
+		"magnetization": {
+			"val": 0.182110,
+			"err": 0.000775
+		},
+		"deltaH": {
+			"val": 0.009832,
+			"err": 0.000248
+		},
+		"exp": {
+			"val": 1.000014,
+			"err": 0.000013
+		}
+	},
+	{
+		"L": 4,
+		"nStep": 40,
+		"acceptance": 0.996277,
+		"magnetization": {
+			"val": 0.182997,
+			"err": 0.000771
+		},
+		"deltaH": {
+			"val": 0.007524,
+			"err": 0.000190
+		},
+		"exp": {
+			"val": 1.000004,
+			"err": 0.000010
+		}
+	},
+	{
+		"L": 4,
+		"nStep": 45,
+		"acceptance": 0.997105,
+		"magnetization": {
+			"val": 0.182976,
+			"err": 0.000768
+		},
+		"deltaH": {
+			"val": 0.005945,
+			"err": 0.000150
+		},
+		"exp": {
+			"val": 1.000003,
+			"err": 0.000008
+		}
+	},
+	{
+		"L": 4,
+		"nStep": 50,
+		"acceptance": 0.997619,
+		"magnetization": {
+			"val": 0.182443,
+			"err": 0.000757
+		},
+		"deltaH": {
+			"val": 0.004807,
+			"err": 0.000121
+		},
+		"exp": {
+			"val": 0.999997,
+			"err": 0.000006
+		}
+	},
+	{
+		"L": 8,
+		"nStep": 10,
+		"acceptance": 0.829613,
+		"magnetization": {
+			"val": 0.059610,
+			"err": 0.000584
+		},
+		"deltaH": {
+			"val": 0.351933,
+			"err": 0.008471
+		},
+		"exp": {
+			"val": 0.999851,
+			"err": 0.000453
+		}
+	},
+	{
+		"L": 8,
+		"nStep": 15,
+		"acceptance": 0.925009,
+		"magnetization": {
+			"val": 0.058519,
+			"err": 0.000537
+		},
+		"deltaH": {
+			"val": 0.151170,
+			"err": 0.003637
+		},
+		"exp": {
+			"val": 1.000054,
+			"err": 0.000191
+		}
+	},
+	{
+		"L": 8,
+		"nStep": 20,
+		"acceptance": 0.958131,
+		"magnetization": {
+			"val": 0.058686,
+			"err": 0.000528
+		},
+		"deltaH": {
+			"val": 0.084110,
+			"err": 0.002029
+		},
+		"exp": {
+			"val": 0.999973,
+			"err": 0.000106
+		}
+	},
+	{
+		"L": 8,
+		"nStep": 25,
+		"acceptance": 0.973032,
+		"magnetization": {
+			"val": 0.058614,
+			"err": 0.000515
+		},
+		"deltaH": {
+			"val": 0.053769,
+			"err": 0.001294
+		},
+		"exp": {
+			"val": 0.999987,
+			"err": 0.000068
+		}
+	},
+	{
+		"L": 8,
+		"nStep": 30,
+		"acceptance": 0.981204,
+		"magnetization": {
+			"val": 0.058521,
+			"err": 0.000527
+		},
+		"deltaH": {
+			"val": 0.037274,
+			"err": 0.000898
+		},
+		"exp": {
+			"val": 0.999998,
+			"err": 0.000047
+		}
+	},
+	{
+		"L": 8,
+		"nStep": 35,
+		"acceptance": 0.986118,
+		"magnetization": {
+			"val": 0.058979,
+			"err": 0.000546
+		},
+		"deltaH": {
+			"val": 0.027383,
+			"err": 0.000659
+		},
+		"exp": {
+			"val": 1.000015,
+			"err": 0.000034
+		}
+	},
+	{
+		"L": 8,
+		"nStep": 40,
+		"acceptance": 0.989597,
+		"magnetization": {
+			"val": 0.058766,
+			"err": 0.000509
+		},
+		"deltaH": {
+			"val": 0.020921,
+			"err": 0.000504
+		},
+		"exp": {
+			"val": 0.999993,
+			"err": 0.000026
+		}
+	},
+	{
+		"L": 8,
+		"nStep": 45,
+		"acceptance": 0.991678,
+		"magnetization": {
+			"val": 0.059287,
+			"err": 0.000530
+		},
+		"deltaH": {
+			"val": 0.016520,
+			"err": 0.000398
+		},
+		"exp": {
+			"val": 1.000012,
+			"err": 0.000021
+		}
+	},
+	{
+		"L": 8,
+		"nStep": 50,
+		"acceptance": 0.993198,
+		"magnetization": {
+			"val": 0.058930,
+			"err": 0.000516
+		},
+		"deltaH": {
+			"val": 0.013372,
+			"err": 0.000322
+		},
+		"exp": {
+			"val": 1.000019,
+			"err": 0.000017
+		}
+	},
+	{
+		"L": 12,
+		"nStep": 10,
+		"acceptance": 0.694207,
+		"magnetization": {
+			"val": 0.023078,
+			"err": 0.000362
+		},
+		"deltaH": {
+			"val": 0.675683,
+			"err": 0.016104
+		},
+		"exp": {
+			"val": 1.001391,
+			"err": 0.000931
+		}
+	},
+	{
+		"L": 12,
+		"nStep": 15,
+		"acceptance": 0.863109,
+		"magnetization": {
+			"val": 0.023044,
+			"err": 0.000315
+		},
+		"deltaH": {
+			"val": 0.279017,
+			"err": 0.006679
+		},
+		"exp": {
+			"val": 1.000171,
+			"err": 0.000356
+		}
+	},
+	{
+		"L": 12,
+		"nStep": 20,
+		"acceptance": 0.923521,
+		"magnetization": {
+			"val": 0.023115,
+			"err": 0.000322
+		},
+		"deltaH": {
+			"val": 0.154414,
+			"err": 0.003700
+		},
+		"exp": {
+			"val": 0.999832,
+			"err": 0.000195
+		}
+	},
+	{
+		"L": 12,
+		"nStep": 25,
+		"acceptance": 0.951161,
+		"magnetization": {
+			"val": 0.022952,
+			"err": 0.000308
+		},
+		"deltaH": {
+			"val": 0.098426,
+			"err": 0.002357
+		},
+		"exp": {
+			"val": 0.999871,
+			"err": 0.000124
+		}
+	},
+	{
+		"L": 12,
+		"nStep": 30,
+		"acceptance": 0.965864,
+		"magnetization": {
+			"val": 0.023274,
+			"err": 0.000294
+		},
+		"deltaH": {
+			"val": 0.068084,
+			"err": 0.001632
+		},
+		"exp": {
+			"val": 0.999990,
+			"err": 0.000086
+		}
+	},
+	{
+		"L": 12,
+		"nStep": 35,
+		"acceptance": 0.975133,
+		"magnetization": {
+			"val": 0.023008,
+			"err": 0.000302
+		},
+		"deltaH": {
+			"val": 0.049965,
+			"err": 0.001197
+		},
+		"exp": {
+			"val": 0.999999,
+			"err": 0.000063
+		}
+	},
+	{
+		"L": 12,
+		"nStep": 40,
+		"acceptance": 0.980865,
+		"magnetization": {
+			"val": 0.023053,
+			"err": 0.000294
+		},
+		"deltaH": {
+			"val": 0.038273,
+			"err": 0.000918
+		},
+		"exp": {
+			"val": 0.999997,
+			"err": 0.000048
+		}
+	},
+	{
+		"L": 12,
+		"nStep": 45,
+		"acceptance": 0.984892,
+		"magnetization": {
+			"val": 0.023469,
+			"err": 0.000301
+		},
+		"deltaH": {
+			"val": 0.030208,
+			"err": 0.000724
+		},
+		"exp": {
+			"val": 1.000010,
+			"err": 0.000038
+		}
+	},
+	{
+		"L": 12,
+		"nStep": 50,
+		"acceptance": 0.987735,
+		"magnetization": {
+			"val": 0.023421,
+			"err": 0.000316
+		},
+		"deltaH": {
+			"val": 0.024464,
+			"err": 0.000587
+		},
+		"exp": {
+			"val": 1.000006,
+			"err": 0.000031
+		}
+	},
+	{
+		"L": 14,
+		"nStep": 10,
+		"acceptance": 0.619971,
+		"magnetization": {
+			"val": 0.015754,
+			"err": 0.000283
+		},
+		"deltaH": {
+			"val": 0.886258,
+			"err": 0.020974
+		},
+		"exp": {
+			"val": 0.998531,
+			"err": 0.001287
+		}
+	},
+	{
+		"L": 14,
+		"nStep": 15,
+		"acceptance": 0.827919,
+		"magnetization": {
+			"val": 0.015351,
+			"err": 0.000243
+		},
+		"deltaH": {
+			"val": 0.354275,
+			"err": 0.008470
+		},
+		"exp": {
+			"val": 0.999569,
+			"err": 0.000455
+		}
+	},
+	{
+		"L": 14,
+		"nStep": 20,
+		"acceptance": 0.903552,
+		"magnetization": {
+			"val": 0.015589,
+			"err": 0.000233
+		},
+		"deltaH": {
+			"val": 0.194773,
+			"err": 0.004661
+		},
+		"exp": {
+			"val": 0.999900,
+			"err": 0.000246
+		}
+	},
+	{
+		"L": 14,
+		"nStep": 25,
+		"acceptance": 0.938503,
+		"magnetization": {
+			"val": 0.015467,
+			"err": 0.000221
+		},
+		"deltaH": {
+			"val": 0.124041,
+			"err": 0.002970
+		},
+		"exp": {
+			"val": 0.999932,
+			"err": 0.000156
+		}
+	},
+	{
+		"L": 14,
+		"nStep": 30,
+		"acceptance": 0.957324,
+		"magnetization": {
+			"val": 0.015552,
+			"err": 0.000217
+		},
+		"deltaH": {
+			"val": 0.085842,
+			"err": 0.002054
+		},
+		"exp": {
+			"val": 1.000004,
+			"err": 0.000108
+		}
+	},
+	{
+		"L": 14,
+		"nStep": 35,
+		"acceptance": 0.968736,
+		"magnetization": {
+			"val": 0.015606,
+			"err": 0.000233
+		},
+		"deltaH": {
+			"val": 0.062851,
+			"err": 0.001506
+		},
+		"exp": {
+			"val": 0.999950,
+			"err": 0.000079
+		}
+	},
+	{
+		"L": 14,
+		"nStep": 40,
+		"acceptance": 0.975763,
+		"magnetization": {
+			"val": 0.015662,
+			"err": 0.000220
+		},
+		"deltaH": {
+			"val": 0.048157,
+			"err": 0.001154
+		},
+		"exp": {
+			"val": 1.000012,
+			"err": 0.000060
+		}
+	},
+	{
+		"L": 14,
+		"nStep": 45,
+		"acceptance": 0.980688,
+		"magnetization": {
+			"val": 0.015250,
+			"err": 0.000222
+		},
+		"deltaH": {
+			"val": 0.038047,
+			"err": 0.000910
+		},
+		"exp": {
+			"val": 0.999961,
+			"err": 0.000048
+		}
+	},
+	{
+		"L": 14,
+		"nStep": 50,
+		"acceptance": 0.984468,
+		"magnetization": {
+			"val": 0.015803,
+			"err": 0.000235
+		},
+		"deltaH": {
+			"val": 0.030796,
+			"err": 0.000737
+		},
+		"exp": {
+			"val": 0.999964,
+			"err": 0.000039
+		}
+	}
+]
