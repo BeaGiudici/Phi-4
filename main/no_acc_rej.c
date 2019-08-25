@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
      /*Declaring the variables */
      int i, j, k; /*Counters*/
      double dTAU; /*Infinitesimal time interval*/
-     double *mag2, mean_m2 = 0.0, mean2_m2 = 0.0, err_m2;
-     double *mag, mean_m = 0.0, mean2_m = 0.0, err_m;
-     double *dH, mean_H = 0.0, mean2_H = 0.0, err_H, H_in;
+     double *mag2, mean_m2 = 0.0, err_m2;
+     double *mag, mean_m = 0.0, err_m;
+     double *dH, mean_H = 0.0, err_H, H_in;
 
      int nBin; /*Number of bins after the rebinning*/
 
@@ -82,16 +82,13 @@ int main(int argc, char *argv[])
 
           /*Rebinning: if the index of the loop exceeded the length of a bin,
           the counter k moves to the next one*/
-          if (j - k * DBIN > DBIN)
+          if (j - k * DBIN + 1 > DBIN)
           {
                /*Computing the mean and the mean of the squares*/
                mean_m += mag[k] / nBin;
                mean_m2 += mag2[k] / nBin;
                mean_H += dH[k] / nBin;
-               mean2_m += mag[k] * mag[k] / nBin;
-               mean2_m2 += mag2[k] * mag2[k] / nBin;
-               mean2_H += dH[k] * dH[k] / nBin;
-
+         
                /*Update the counter*/
                k++;
 
@@ -105,10 +102,13 @@ int main(int argc, char *argv[])
           dH[k] += fabs((hamiltonian() - H_in)) / DBIN;
      }
 
-     /*Estimating the errors*/
-     err_m = sqrt((mean2_m - mean_m * mean_m) / nBin);
-     err_m2 = sqrt((mean2_m2 - mean_m2 * mean_m2) / nBin);
-     err_H = sqrt((mean2_H - mean_H * mean_H) / nBin);
+     /*Using jackknife to find the errors*/
+     clustering(mag, mean_m, nBin);
+     clustering(mag2, mean_m2, nBin);
+     clustering(dH, mean_H, nBin);
+     err_m = error_jack(mag, mean_m, nBin);
+     err_m2 = error_jack(mag2, mean_m2, nBin);
+     err_H = error_jack(dH, mean_H, nBin);
 
      /*Printing all the results (this particular formatting is useful to write 
      the .json file in the final simulation)*/

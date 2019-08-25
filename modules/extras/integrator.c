@@ -99,8 +99,11 @@ bool MolDyn(double tau, double *deltaH)
 
      H_fin = hamiltonian();
      dH = H_fin - H_in;
+     
      if (deltaH != NULL)
+     {
           *deltaH = dH;
+     }
 
      /*Accept / Reject*/
      if (dH > 0)

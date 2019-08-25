@@ -132,7 +132,7 @@ err = np.array([line["deltaH"]["err"]
 plt.errorbar(x, H, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b')
 # Linear fit
-best, covar = curve_fit(f.linear, x, H, sigma=err, p0=(0.0, 10.))
+best, covar = curve_fit(f.linear, x, H, sigma=err, p0=(1e-5, 10.))
 plt.plot(x, f.linear(x, *best), ls='--', c='r', linewidth=0.65)
 deg = len(H) - len(best)
 
@@ -160,7 +160,7 @@ plt.errorbar(x, exp, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b')
 
 # Linear fit
-best, covar = curve_fit(f.constant, x, exp, sigma=err, p0=(1.0))
+best, covar = curve_fit(f.constant, x, exp, p0=(1.0), sigma=err)
 plt.plot(x, f.constant(x, *best), ls='--', c='r', linewidth=0.65)
 deg = len(exp) - len(best)
 

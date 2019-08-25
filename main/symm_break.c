@@ -67,9 +67,12 @@ int main(int argc, char *argv[])
 
           /*Rebinning: if the index of the loop exceeded the length of a bin,
           the counter k moves to the next one*/
-          if (j - k * DBIN > DBIN)
+          if (j - k * DBIN + 1 > DBIN)
           {
+               /*Update the conter*/
                k++;
+
+               /*Set the new entries to zero*/
                mag[k] = 0.0;
                mag2[k] = 0.0;
                mag4[k] = 0.0;

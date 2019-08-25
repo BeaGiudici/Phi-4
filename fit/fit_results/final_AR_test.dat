@@ -31,11 +31,11 @@ Reduced chi-squared:  0.3128319473482309
 
 
 	 HAMILTONIAN 	
-Parameters:  [-4.53408701e-05  1.21048944e+01]
-Parameters' Std Error:  [1.35868860e-05 1.88878896e-02]
-Covariance:  [[ 1.84603472e-10 -2.18269449e-07]
- [-2.18269449e-07  3.56752375e-04]]
-Reduced chi-squared:  6.354281627444341
+Parameters:  [-4.53408394e-05  1.21048944e+01]
+Parameters' Std Error:  [1.3586858e-05 1.8887868e-02]
+Covariance:  [[ 1.84602710e-10 -2.18268654e-07]
+ [-2.18268654e-07  3.56751557e-04]]
+Reduced chi-squared:  6.354281627448914
 
 
 	 EXPONENTIAL 	
