@@ -6,7 +6,7 @@
  * 
  * The externally accessible functions are
  *  
- *   void clustering (doublw *x, double mean, int N)
+ *   void clustering (double *x, double mean, int N)
  *        Cluster of the vector (of dimension N) of variables x, with 
  *        given mean value
  * 

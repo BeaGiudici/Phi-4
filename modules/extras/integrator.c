@@ -78,7 +78,7 @@ bool MolDyn(double tau, double *deltaH)
      int i;
      bool accept = true;
      double phi_in[V];
-     double H_in, H_fin, r[1], dH;
+     double H_in, r[1], dH;
 
      /*Saving the initial values of the field*/
      for (i = 0; i < V; i++)
@@ -88,8 +88,8 @@ bool MolDyn(double tau, double *deltaH)
 
      /*Molecular dynamics*/
      momentum_init(); /*Inizializing the momenta*/
-     H_in = hamiltonian();
 
+     H_in = hamiltonian();
      for (i = 0; i < hmc_params.nstep; i++)
      {
           up_momentum(tau * 0.5);
@@ -97,27 +97,24 @@ bool MolDyn(double tau, double *deltaH)
           up_momentum(tau * 0.5);
      }
 
-     H_fin = hamiltonian();
-     dH = H_fin - H_in;
-     
+     dH = hamiltonian() - H_in;
+
      if (deltaH != NULL)
      {
           *deltaH = dH;
      }
 
      /*Accept / Reject*/
-     if (dH > 0)
+     
+     ranlxd(r, 1);
+     if (dH > 0 && exp(-1. * dH) < r[0])
      {
-          ranlxd(r, 1);
-          if (exp(-1 * dH) < r[0])
+          for (i = 0; i < V; i++)
           {
-               accept = false;
-               for (i = 0; i < V; i++)
-               {
-                    phi[i] = phi_in[i];
-               }
+               phi[i] = phi_in[i];
           }
+          accept = false;
      }
-
+     
      return accept;
 }

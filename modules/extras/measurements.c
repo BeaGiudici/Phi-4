@@ -77,7 +77,6 @@ double action(void)
           phi2 = phi[i] * phi[i];
           S += -2 * kappa * phin * phi[i] + phi2 + lambda * (phi2 - 1.0) * (phi2 - 1.0);
      }
-
      return S;
 }
 

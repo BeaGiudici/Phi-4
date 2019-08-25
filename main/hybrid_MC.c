@@ -7,7 +7,6 @@
 *
 * AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
 * CREATED: 30/05/2019
-* MODIFIED: 24/08/2019
 *
 *******************************************************************************/
 
@@ -29,10 +28,10 @@ int main(int argc, char *argv[])
     /*Declaring the variables */
     int j, accepted, k; /*Counters*/
     double dTAU;        /*Infinitesimal time interval*/
-    double *dH, deltaH, mean_H = 0.0, err_H;
-    double *expo, mean_expo = 0.0, err_expo;
-    double *mag2, mean_m2 = 0.0, err_m2;
-    double *mag, mean_m = 0.0, err_m;
+    double *dH_abs, deltaH, mean_H = 0.0, err_H, mean2_H = 0.0;
+    double *expo, mean_expo = 0.0, err_expo, mean2_e = 0.0;
+    double *mag2, mean_m2 = 0.0, err_m2, mean2_m2 = 0.0;
+    double *mag, mean_m = 0.0, err_m, mean2_m = 0.0;
     int nBin; /*Number of bins after the rebinning*/
 
     /*See if the right number of argument is passed in the command line*/
@@ -55,63 +54,54 @@ int main(int argc, char *argv[])
 
     dTAU = (double)hmc_params.tlength / hmc_params.nstep;
     nBin = hmc_params.ntraj / DBIN;
-    
+
     /*Initializing the rebinned vector*/
     mag = malloc(nBin * sizeof(double));
     mag2 = malloc(nBin * sizeof(double));
-    dH = malloc(nBin * sizeof(double));
+    dH_abs = malloc(nBin * sizeof(double));
     expo = malloc(nBin * sizeof(double));
-    mag[0] = 0.0;
-    mag2[0] = 0.0;
-    dH[0] = 0.0;
-    expo[0] = 0.0;
-
+    
     thermalization(dTAU);
 
-    /*Setting to zero the counter used for the rebinning*/
-    k = 0;
 
-    for (j = 0; j < hmc_params.ntraj; j++)
+    /*Proceeding with the molecular dynamics and the rebinning*/
+    for (j = 0; j < nBin; j++)
     {
-        if (!MolDyn(dTAU, &deltaH))
-            accepted--;
+        /*Setting to zero the entries in order to sum over later*/
+        mag[j] = 0.0;
+        mag2[j] = 0.0;
+        expo[j] = 0.0;
+        dH_abs[j] = 0.0;
 
-        /*Rebinning: if the index of the loop exceeded the length of a bin,
-        the counter k moves to the next one*/
-        if (j - k * DBIN + 1 > DBIN)
-        {
-            /*Computing the mean and the mean of the squares*/
-            mean_m += mag[k] / nBin;
-            mean_m2 += mag2[k] / nBin;
-            mean_expo += expo[k] / nBin;
-            mean_H += dH[k] / nBin;
+        for(k=0; k < DBIN; k++){
+            if (!MolDyn(dTAU, &deltaH)) accepted--;
             
-            /*Update the counter*/
-            k++;
-
-            /*Setting the new entries to zero*/
-            mag[k] = 0.0;
-            mag2[k] = 0.0;
-            dH[k] = 0.0;
-            expo[k] = 0.0;
+            /*Saving the measurements*/
+            mag[j] += fabs(magnetization() / V) / DBIN;
+            mag2[j] += (magnetization() * magnetization() / (V * V)) / DBIN;
+            expo[j] += exp(-1.0 * deltaH) / DBIN;
+            dH_abs[j] += fabs(deltaH) / DBIN;
         }
-        mag[k] += fabs(magnetization() / V) / nBin;
-        mag2[k] += (magnetization() * magnetization() / (V * V)) / DBIN;
-        dH[k] += fabs(deltaH) / DBIN;
-        expo[k] += exp(-1. * deltaH) / DBIN;
+
+        /*Computing the means and the means of the squares*/
+        mean_m += mag[j] / nBin;
+        mean_m2 += mag2[j] / nBin;
+        mean_expo += expo[j] / nBin;
+        mean_H += dH_abs[j] / nBin;
+        mean2_m += mag[j]*mag[j]/nBin;
+        mean2_m2 += mag2[j]*mag2[j]/nBin;
+        mean2_H += dH_abs[j]*dH_abs[j]/nBin;
+        mean2_e += expo[j]*expo[j]/nBin;
+        
     }
 
-    /*Using jackknife to find the errors*/
-    clustering(mag, mean_m, nBin);
-    clustering(mag2, mean_m2, nBin);
-    clustering(dH, mean_H, nBin);
-    clustering(expo, mean_expo, nBin);
-    err_m = error_jack(mag, mean_m, nBin);
-    err_m2 = error_jack(mag2, mean_m2, nBin);
-    err_H = error_jack(dH, mean_H, nBin);
-    err_expo = error_jack(expo, mean_expo, nBin);
+    /*Computing the errors*/
+    err_m = sqrt((mean2_m-mean_m*mean_m)/nBin);
+    err_m2 = sqrt((mean2_m2-mean_m2*mean_m2)/nBin);
+    err_H = sqrt((mean2_H-mean_H*mean_H)/nBin);
+    err_expo = sqrt((mean2_e-mean_expo*mean_expo)/nBin);
 
-    /*Printing all the results (this particular formatting is useful to write 
+    /*Printing all the results (this particular format is useful to write 
     the .json file in the final simulation)*/
     fprintf(stdout, "\t\"L\" : %i,\n", L);
     fprintf(stdout, "\t\"nStep\" : %i,\n", hmc_params.nstep);

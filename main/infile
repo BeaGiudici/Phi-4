@@ -1,6 +1,6 @@
-kappa       0.175
+kappa       0.18169
 lambda      1.145
-ntherm      250
+ntherm      100
 ntraj       1000000
 traj_length 1
 nstep       15

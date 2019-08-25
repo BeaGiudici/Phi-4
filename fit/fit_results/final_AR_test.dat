@@ -1,45 +1,45 @@
 	 ABSOLUTE MAGNETIZATION 	
 WITHOUT ACCEPT/REJECT
-Parameters:  [ 0.37544641 -2.08213029]
-Parameters' Std Error:  [0.00034153 0.1712817 ]
-Covariance:  [[ 1.16642344e-07 -4.43298762e-05]
- [-4.43298762e-05  2.93374196e-02]]
-Reduced chi-squared:  0.4063731778880661
+Parameters:  [ 0.37544313 -2.08018999]
+Parameters' Std Error:  [0.00025228 0.06338648]
+Covariance:  [[ 6.36427075e-08 -1.02837546e-05]
+ [-1.02837546e-05  4.01784544e-03]]
+Reduced chi-squared:  0.34839131695909714
 
 
 WITH ACCEPT/REJECT
-Parameters:  [0.37556739]
-Parameters' Std Error:  [0.00019226]
-Covariance:  [[3.69653219e-08]]
-Reduced chi-squared:  0.29419209798957063
+Parameters:  [0.37552938]
+Parameters' Std Error:  [0.00017484]
+Covariance:  [[3.05697757e-08]]
+Reduced chi-squared:  0.2711672205289549
 
 
 	 SQUARED MAGNETIZATION 	
 WITHOUT ACCEPT/REJECT
-Parameters:  [ 0.18287383 -1.74771246]
-Parameters' Std Error:  [0.00023301 0.11622345]
-Covariance:  [[ 5.42953051e-08 -2.05498004e-05]
- [-2.05498004e-05  1.35078908e-02]]
-Reduced chi-squared:  0.33126638926470875
+Parameters:  [ 0.1827806  -1.67735441]
+Parameters' Std Error:  [0.00017791 0.04399588]
+Covariance:  [[ 3.16510183e-08 -5.05364885e-06]
+ [-5.05364885e-06  1.93563713e-03]]
+Reduced chi-squared:  0.3043923550962991
 
 
 WITH ACCEPT/REJECT
-Parameters:  [0.18284834]
-Parameters' Std Error:  [0.00015028]
-Covariance:  [[2.25839747e-08]]
-Reduced chi-squared:  0.3128319473482309
+Parameters:  [0.18284093]
+Parameters' Std Error:  [0.0001334]
+Covariance:  [[1.7794271e-08]]
+Reduced chi-squared:  0.2744106927542867
 
 
 	 HAMILTONIAN 	
-Parameters:  [-4.53408394e-05  1.21048944e+01]
-Parameters' Std Error:  [1.3586858e-05 1.8887868e-02]
-Covariance:  [[ 1.84602710e-10 -2.18268654e-07]
- [-2.18268654e-07  3.56751557e-04]]
-Reduced chi-squared:  6.354281627448914
+Parameters:  [-8.57650071e-05  1.21778114e+01]
+Parameters' Std Error:  [3.48620522e-05 4.85877099e-02]
+Covariance:  [[ 1.21536269e-09 -1.37944185e-06]
+ [-1.37944185e-06  2.36076556e-03]]
+Reduced chi-squared:  60.17998939593837
 
 
 	 EXPONENTIAL 	
-Parameters:  [0.99900462]
-Parameters' Std Error:  [6.90322249e-06]
-Covariance:  [[4.76544807e-11]]
-Reduced chi-squared:  882112695.4132887
+Parameters:  [0.99900366]
+Parameters' Std Error:  [6.42244431e-06]
+Covariance:  [[4.12477909e-11]]
+Reduced chi-squared:  778726693.6005973

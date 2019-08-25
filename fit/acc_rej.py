@@ -10,8 +10,8 @@ import json
 import functions as f
 
 L = 4
-data_AR = json.load(open('../results/accRej.json', 'r'))
-data_no_AR = json.load(open('../results/no_accRej.json', 'r'))
+data_AR = json.load(open('../accRej_noJack.json', 'r'))
+data_no_AR = json.load(open('../no_accRej_noJack.json', 'r'))
 step = np.array([line["nStep"]
                  for line in filter(lambda item: item["L"] == L, data_AR)])
 x = 1./(step*step)  # dTau**2
@@ -125,15 +125,17 @@ plt.legend()
 print('\t HAMILTONIAN \t')
 f3 = plt.figure()
 
+dT = 1./step
 H = np.array([line["deltaH"]["val"]
               for line in filter(lambda item: item["L"] == L, data_AR)])
 err = np.array([line["deltaH"]["err"]
                 for line in filter(lambda item: item["L"] == L, data_AR)])
-plt.errorbar(x, H, yerr=err, ls='', marker='.', markersize=1,
+plt.errorbar(dT, H, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b')
 # Linear fit
-best, covar = curve_fit(f.linear, x, H, sigma=err, p0=(1e-5, 10.))
-plt.plot(x, f.linear(x, *best), ls='--', c='r', linewidth=0.65)
+best, covar = curve_fit(f.quadratic, dT, H, sigma=err, p0=(1.0, -0.01, 10.))
+y = np.linspace(min(dT), max(dT), 100)
+plt.plot(y, f.quadratic(y, *best), ls='--', c='r', linewidth=0.65)
 deg = len(H) - len(best)
 
 #Print the results of the fit
@@ -141,7 +143,7 @@ print('Parameters: ', best)
 print("Parameters' Std Error: ", np.sqrt(np.diag(covar)))
 print('Covariance: ', covar)
 print('Reduced chi-squared: ',
-      f.red_chi_sq(H, f.linear(x, *best), err, dof=deg))
+      f.red_chi_sq(H, f.quadratic(dT, *best), err, dof=deg))
 print('\n')
 
 plt.title('Variation of the Hamiltonian')

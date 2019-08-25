@@ -9,7 +9,8 @@ def red_chi_sq(data, model, sigma, dof=2):
 Returns the reduced chi square for an arbitrary
 model with dof degree of freedom
     '''
-    chi = np.sum(((data-model)/sigma)**2)
+    arg = (data-model)/sigma
+    chi = np.sum(arg*arg)
     return chi/dof
 
 

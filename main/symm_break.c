@@ -6,7 +6,6 @@
 *
 * AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
 * CREATED: 13/06/2019
-* MODIFIED: 13/06/2019
 *
 *******************************************************************************/
 
@@ -54,32 +53,23 @@ int main(int argc, char *argv[])
      mag = malloc(nBin * sizeof(double));
      mag2 = malloc(nBin * sizeof(double));
      mag4 = malloc(nBin * sizeof(double));
-     mag[0] = 0.0;
-     mag2[0] = 0.0;
-     mag4[0] = 0.0;
 
      thermalization(dTAU);
 
-     for (j = 0; j < hmc_params.ntraj; j++)
+     for (j = 0; j < nBin; j++)
      {
-          if (!MolDyn(dTAU, NULL))
-               accepted--;
+          mag[j] = 0.0;
+          mag2[j] = 0.0;
+          mag4[j] = 0.0;
+          for(k=0; k<DBIN; k++){
+               if (!MolDyn(dTAU, NULL)) accepted--;
 
-          /*Rebinning: if the index of the loop exceeded the length of a bin,
-          the counter k moves to the next one*/
-          if (j - k * DBIN + 1 > DBIN)
-          {
-               /*Update the conter*/
-               k++;
-
-               /*Set the new entries to zero*/
-               mag[k] = 0.0;
-               mag2[k] = 0.0;
-               mag4[k] = 0.0;
+               /*Saving the measurements*/
+               mag[j]+= fabs(magnetization()) / DBIN;
+               mag2[j] += magnetization() * magnetization() / DBIN;
+               mag4[j] += magnetization() * magnetization() * magnetization() * magnetization() / DBIN;
           }
-          mag[k] += fabs(magnetization()) / DBIN;
-          mag2[k] += magnetization() * magnetization() / DBIN;
-          mag4[k] += magnetization() * magnetization() * magnetization() * magnetization() / DBIN;
+ 
      }
 
      /*Writing the results on a file*/
