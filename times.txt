@@ -1,0 +1,14 @@
+AR_text.sh
+real	362m35,901s
+user	723m32,880s
+sys	0m1,840s
+
+sBreak.sh
+real	177m39,041s
+user	354m37,753s
+sys	0m9,715s
+
+sBreak_zoom.sh
+real	297m7,362s
+user	593m26,897s
+sys	0m1,443s
