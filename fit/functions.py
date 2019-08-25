@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 # Useful functions
 
+=======
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 import math
 import numpy as np
 
@@ -9,6 +12,7 @@ def red_chi_sq(data, model, sigma, dof=2):
 Returns the reduced chi square for an arbitrary
 model with dof degree of freedom
     '''
+<<<<<<< HEAD
     arg = (data-model)/sigma
     chi = np.sum(arg*arg)
     return chi/dof
@@ -21,6 +25,12 @@ Constant function
     return 0.0*x + par[0]
 
 
+=======
+    chi = np.sum(((data-model)/sigma)**2)
+    return chi/dof
+
+
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 def linear(x, *par):
     '''
 Function for a linear fit

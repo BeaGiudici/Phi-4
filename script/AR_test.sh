@@ -11,7 +11,11 @@ do
 	sed "s|@l|$j|g" ../include/lattice1.h > ../include/lattice.h
 	make hybrid_MC no_acc_rej > garbage.dat
 
+<<<<<<< HEAD
 	for ((i=10; i<=50; i+=5)); do
+=======
+	for ((i=15; i<=50; i+=5)); do
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 		echo "L = $j	nStep = $i"
 		echo "{" >> ../results/accRej.json
 		echo "{" >> ../results/no_accRej.json

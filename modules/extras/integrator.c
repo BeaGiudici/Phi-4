@@ -17,7 +17,11 @@
  *        Update of the momentum during leap frog integration, given the length
  *        of the step, tau
  *   
+<<<<<<< HEAD
  *   bool MolDyn(double tau)
+=======
+ *   void MolDyn(double tau)
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
  *        Performs the molecular dynamics for one trajectory
  *   
  *  AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
@@ -78,7 +82,11 @@ bool MolDyn(double tau, double *deltaH)
      int i;
      bool accept = true;
      double phi_in[V];
+<<<<<<< HEAD
      double H_in, r[1], dH;
+=======
+     double H_in, H_fin, r[1], dH;
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 
      /*Saving the initial values of the field*/
      for (i = 0; i < V; i++)
@@ -88,8 +96,13 @@ bool MolDyn(double tau, double *deltaH)
 
      /*Molecular dynamics*/
      momentum_init(); /*Inizializing the momenta*/
+<<<<<<< HEAD
 
      H_in = hamiltonian();
+=======
+     H_in = hamiltonian();
+
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
      for (i = 0; i < hmc_params.nstep; i++)
      {
           up_momentum(tau * 0.5);
@@ -97,6 +110,7 @@ bool MolDyn(double tau, double *deltaH)
           up_momentum(tau * 0.5);
      }
 
+<<<<<<< HEAD
      dH = hamiltonian() - H_in;
 
      if (deltaH != NULL)
@@ -116,5 +130,26 @@ bool MolDyn(double tau, double *deltaH)
           accept = false;
      }
      
+=======
+     H_fin = hamiltonian();
+     dH = H_fin - H_in;
+     if (deltaH != NULL)
+          *deltaH = dH;
+
+     /*Accept / Reject*/
+     if (dH > 0)
+     {
+          ranlxd(r, 1);
+          if (exp(-1 * dH) < r[0])
+          {
+               accept = false;
+               for (i = 0; i < V; i++)
+               {
+                    phi[i] = phi_in[i];
+               }
+          }
+     }
+
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
      return accept;
 }

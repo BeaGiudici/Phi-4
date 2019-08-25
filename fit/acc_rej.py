@@ -10,8 +10,13 @@ import json
 import functions as f
 
 L = 4
+<<<<<<< HEAD
 data_AR = json.load(open('../accRej_noJack.json', 'r'))
 data_no_AR = json.load(open('../no_accRej_noJack.json', 'r'))
+=======
+data_AR = json.load(open('../results/accRej.json', 'r'))
+data_no_AR = json.load(open('../results/no_accRej.json', 'r'))
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 step = np.array([line["nStep"]
                  for line in filter(lambda item: item["L"] == L, data_AR)])
 x = 1./(step*step)  # dTau**2
@@ -32,10 +37,15 @@ plt.errorbar(x, mag, yerr=err, ls='', marker='.', markersize=1,
 # Linear fit
 best, covar = curve_fit(f.linear, x, mag, sigma=err, p0=(0.22, 0.1))
 plt.plot(x, f.linear(x, *best), ls='--', c='red', linewidth=0.65)
+<<<<<<< HEAD
 deg = len(mag) - len(best) #Here and below: degrees of freedom for the
                            #reduced chi-squared
 
 #Print the results of the fit
+=======
+deg = len(mag) - len(best)
+
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 print("WITHOUT ACCEPT/REJECT")
 print('Parameters: ', best)
 print("Parameters' Std Error: ", np.sqrt(np.diag(covar)))
@@ -51,16 +61,27 @@ err = np.array([line["magnetization"]["err"]
 plt.errorbar(x, mag, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b', label='With Accept/Reject')
 # Linear fit
+<<<<<<< HEAD
 best, covar = curve_fit(f.constant, x, mag, sigma=err, p0=(0.37544641))
 plt.plot(x, f.constant(x, *best), ls='--', c='b', linewidth=0.65)
 deg = len(mag) - len(best)
 
 #Print the results of the fit
+=======
+best, covar = curve_fit(f.linear, x, mag, sigma=err, p0=(0.22, 0.1))
+plt.plot(x, f.linear(x, *best), ls='--', c='b', linewidth=0.65)
+deg = len(mag) - len(best)
+
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 print("WITH ACCEPT/REJECT")
 print('Parameters: ', best)
 print("Parameters' Std Error: ", np.sqrt(np.diag(covar)))
 print('Covariance: ', covar)
+<<<<<<< HEAD
 print('Reduced chi-squared: ', f.red_chi_sq(mag, f.constant(x, *best), err, dof=deg))
+=======
+print('Reduced chi-squared: ', f.red_chi_sq(mag, f.linear(x, *best), err, dof=deg))
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 print('\n')
 
 plt.title('Comparing |m| with and without Accept/Reject')
@@ -87,7 +108,10 @@ best, covar = curve_fit(f.linear, x, mag, sigma=err, p0=(0.22, 0.1))
 plt.plot(x, f.linear(x, *best), ls='--', c='red', linewidth=0.65)
 deg = len(mag) - len(best)
 
+<<<<<<< HEAD
 #Print the results of the fit
+=======
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 print("WITHOUT ACCEPT/REJECT")
 print('Parameters: ', best)
 print("Parameters' Std Error: ", np.sqrt(np.diag(covar)))
@@ -103,16 +127,27 @@ err = np.array([line["mag_sq"]["err"]
 plt.errorbar(x, mag, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b', label='With Accept/Reject')
 # Linear fit
+<<<<<<< HEAD
 best, covar = curve_fit(f.constant, x, mag, sigma=err, p0=(0.18287383))
 plt.plot(x, f.constant(x, *best), ls='--', c='b', linewidth=0.65)
 deg = len(mag) - len(best)
 
 #Print the results of the fit
+=======
+best, covar = curve_fit(f.linear, x, mag, sigma=err, p0=(0.22, 0.1))
+plt.plot(x, f.linear(x, *best), ls='--', c='b', linewidth=0.65)
+deg = len(mag) - len(best)
+
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 print("WITH ACCEPT/REJECT")
 print('Parameters: ', best)
 print("Parameters' Std Error: ", np.sqrt(np.diag(covar)))
 print('Covariance: ', covar)
+<<<<<<< HEAD
 print('Reduced chi-squared: ', f.red_chi_sq(mag, f.constant(x, *best), err, dof=deg))
+=======
+print('Reduced chi-squared: ', f.red_chi_sq(mag, f.linear(x, *best), err, dof=deg))
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 print('\n')
 
 plt.title(r'Comparing $m^2$ with and without Accept/Reject')
@@ -125,11 +160,15 @@ plt.legend()
 print('\t HAMILTONIAN \t')
 f3 = plt.figure()
 
+<<<<<<< HEAD
 dT = 1./step
+=======
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 H = np.array([line["deltaH"]["val"]
               for line in filter(lambda item: item["L"] == L, data_AR)])
 err = np.array([line["deltaH"]["err"]
                 for line in filter(lambda item: item["L"] == L, data_AR)])
+<<<<<<< HEAD
 plt.errorbar(dT, H, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b')
 # Linear fit
@@ -139,11 +178,24 @@ plt.plot(y, f.quadratic(y, *best), ls='--', c='r', linewidth=0.65)
 deg = len(H) - len(best)
 
 #Print the results of the fit
+=======
+plt.errorbar(x, H, yerr=err, ls='', marker='.', markersize=1,
+             color='b', elinewidth=0.5, capsize=2.5, ecolor='b')
+# Linear fit
+best, covar = curve_fit(f.linear, x, H, sigma=err, p0=(1., 1.))
+plt.plot(x, f.linear(x, *best), ls='--', c='b', linewidth=0.65)
+deg = len(H) - len(best)
+
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 print('Parameters: ', best)
 print("Parameters' Std Error: ", np.sqrt(np.diag(covar)))
 print('Covariance: ', covar)
 print('Reduced chi-squared: ',
+<<<<<<< HEAD
       f.red_chi_sq(H, f.quadratic(dT, *best), err, dof=deg))
+=======
+      f.red_chi_sq(H, f.linear(x, *best), err, dof=deg))
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 print('\n')
 
 plt.title('Variation of the Hamiltonian')
@@ -162,24 +214,39 @@ plt.errorbar(x, exp, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b')
 
 # Linear fit
+<<<<<<< HEAD
 best, covar = curve_fit(f.constant, x, exp, p0=(1.0), sigma=err)
 plt.plot(x, f.constant(x, *best), ls='--', c='r', linewidth=0.65)
 deg = len(exp) - len(best)
 
 #Print the results of the fit
+=======
+best, covar = curve_fit(f.linear, x, exp, sigma=err, p0=(1., 0.0))
+plt.plot(x, f.linear(x, *best), ls='--', c='r', linewidth=0.65)
+deg = len(exp) - len(best)
+
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 print('\t EXPONENTIAL \t')
 print('Parameters: ', best)
 print("Parameters' Std Error: ", np.sqrt(np.diag(covar)))
 print('Covariance: ', covar)
 print('Reduced chi-squared: ', f.red_chi_sq(H,
+<<<<<<< HEAD
                                             f.constant(x, *best), err, dof=deg))
+=======
+                                            f.linear(x, *best), err, dof=deg))
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 
 plt.title('Behaviour of the exponential')
 plt.grid(ls=':')
 plt.xlabel(r'$\delta \tau^2$')
 plt.ylabel(r'$e^{-\Delta H}$')
 
+<<<<<<< HEAD
 # STUDY OF THE ACCEPTANCE
+=======
+# ACCEPTANCE
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 
 f5 = plt.figure()
 plt.title('Acceptance behavior')

@@ -42,7 +42,10 @@ typedef struct
 
 int main(int argc, char *argv[])
 {
+<<<<<<< HEAD
      /*Declaring the variables */
+=======
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
      RESULTS res;
      double *m, *m2, *m4, *s, *bnd;
      double mean_m4 = 0.0;
@@ -52,7 +55,10 @@ int main(int argc, char *argv[])
 			(the compiler gives me an error otherwise)*/
      FILE *file_in;
 
+<<<<<<< HEAD
      /*See if the right number of argument is passed in the command line*/
+=======
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
      if (argc != 3)
      {
           fprintf(stderr, "Number of arguments not correct\n");
@@ -118,8 +124,11 @@ int main(int argc, char *argv[])
      res.sus.error = error_jack(s, res.sus.value, nBin);
      res.binder.error = error_jack(bnd, res.binder.value, nBin);
 
+<<<<<<< HEAD
      /*Printing all the results (this particular formatting is useful to write 
      the .json file in the final simulation)*/
+=======
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
      printf("\t\"L\" : %i,\n", L);
      printf("\t\"kappa\" : %f,\n", res.kappa);
      printf("\t\"magnetization\" : {\"val\" : %f, \"err\" : %f},\n", res.mag.value / V, res.mag.error / V);

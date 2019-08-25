@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
 	{
 		"L": 4,
 		"nStep": 15,
@@ -512,3 +513,230 @@
 		}
 	}
 ]
+=======
+{
+	"L" : 4,
+	"nStep" : 15,
+	"magnetization" : {"val" : 0.366150, "err" : 0.000973},
+	"mag_sq" : {"val" : 0.175045, "err" : 0.000729},
+	"deltaH" : {"val" : 0.054055, "err" : 0.000049}
+},
+{
+	"L" : 4,
+	"nStep" : 20,
+	"magnetization" : {"val" : 0.370191, "err" : 0.000993},
+	"mag_sq" : {"val" : 0.178492, "err" : 0.000745},
+	"deltaH" : {"val" : 0.030258, "err" : 0.000028}
+},
+{
+	"L" : 4,
+	"nStep" : 25,
+	"magnetization" : {"val" : 0.371544, "err" : 0.001004},
+	"mag_sq" : {"val" : 0.179774, "err" : 0.000755},
+	"deltaH" : {"val" : 0.019273, "err" : 0.000017}
+},
+{
+	"L" : 4,
+	"nStep" : 30,
+	"magnetization" : {"val" : 0.374114, "err" : 0.000968},
+	"mag_sq" : {"val" : 0.181545, "err" : 0.000730},
+	"deltaH" : {"val" : 0.013386, "err" : 0.000012}
+},
+{
+	"L" : 4,
+	"nStep" : 35,
+	"magnetization" : {"val" : 0.374528, "err" : 0.000997},
+	"mag_sq" : {"val" : 0.182021, "err" : 0.000761},
+	"deltaH" : {"val" : 0.009826, "err" : 0.000009}
+},
+{
+	"L" : 4,
+	"nStep" : 40,
+	"magnetization" : {"val" : 0.373830, "err" : 0.000990},
+	"mag_sq" : {"val" : 0.181699, "err" : 0.000737},
+	"deltaH" : {"val" : 0.007499, "err" : 0.000007}
+},
+{
+	"L" : 4,
+	"nStep" : 45,
+	"magnetization" : {"val" : 0.374078, "err" : 0.001007},
+	"mag_sq" : {"val" : 0.181736, "err" : 0.000764},
+	"deltaH" : {"val" : 0.005936, "err" : 0.000006}
+},
+{
+	"L" : 4,
+	"nStep" : 50,
+	"magnetization" : {"val" : 0.374120, "err" : 0.000980},
+	"mag_sq" : {"val" : 0.181700, "err" : 0.000748},
+	"deltaH" : {"val" : 0.004805, "err" : 0.000004}
+},
+{
+	"L" : 8,
+	"nStep" : 15,
+	"magnetization" : {"val" : 0.193620, "err" : 0.001017},
+	"mag_sq" : {"val" : 0.052774, "err" : 0.000458},
+	"deltaH" : {"val" : 0.150788, "err" : 0.000125}
+},
+{
+	"L" : 8,
+	"nStep" : 20,
+	"magnetization" : {"val" : 0.197503, "err" : 0.001065},
+	"mag_sq" : {"val" : 0.054696, "err" : 0.000489},
+	"deltaH" : {"val" : 0.084191, "err" : 0.000069}
+},
+{
+	"L" : 8,
+	"nStep" : 25,
+	"magnetization" : {"val" : 0.200740, "err" : 0.001098},
+	"mag_sq" : {"val" : 0.056393, "err" : 0.000506},
+	"deltaH" : {"val" : 0.053638, "err" : 0.000043}
+},
+{
+	"L" : 8,
+	"nStep" : 30,
+	"magnetization" : {"val" : 0.200749, "err" : 0.001062},
+	"mag_sq" : {"val" : 0.056249, "err" : 0.000496},
+	"deltaH" : {"val" : 0.037195, "err" : 0.000031}
+},
+{
+	"L" : 8,
+	"nStep" : 35,
+	"magnetization" : {"val" : 0.203317, "err" : 0.001062},
+	"mag_sq" : {"val" : 0.057512, "err" : 0.000494},
+	"deltaH" : {"val" : 0.027336, "err" : 0.000022}
+},
+{
+	"L" : 8,
+	"nStep" : 40,
+	"magnetization" : {"val" : 0.203603, "err" : 0.001108},
+	"mag_sq" : {"val" : 0.057751, "err" : 0.000523},
+	"deltaH" : {"val" : 0.020916, "err" : 0.000017}
+},
+{
+	"L" : 8,
+	"nStep" : 45,
+	"magnetization" : {"val" : 0.203413, "err" : 0.001073},
+	"mag_sq" : {"val" : 0.057590, "err" : 0.000503},
+	"deltaH" : {"val" : 0.016517, "err" : 0.000014}
+},
+{
+	"L" : 8,
+	"nStep" : 50,
+	"magnetization" : {"val" : 0.204590, "err" : 0.001108},
+	"mag_sq" : {"val" : 0.058155, "err" : 0.000517},
+	"deltaH" : {"val" : 0.013360, "err" : 0.000011}
+},
+{
+	"L" : 12,
+	"nStep" : 15,
+	"magnetization" : {"val" : 0.115019, "err" : 0.000811},
+	"mag_sq" : {"val" : 0.019741, "err" : 0.000246},
+	"deltaH" : {"val" : 0.276319, "err" : 0.000228}
+},
+{
+	"L" : 12,
+	"nStep" : 20,
+	"magnetization" : {"val" : 0.118813, "err" : 0.000873},
+	"mag_sq" : {"val" : 0.020954, "err" : 0.000272},
+	"deltaH" : {"val" : 0.154010, "err" : 0.000125}
+},
+{
+	"L" : 12,
+	"nStep" : 25,
+	"magnetization" : {"val" : 0.121592, "err" : 0.000917},
+	"mag_sq" : {"val" : 0.021872, "err" : 0.000288},
+	"deltaH" : {"val" : 0.098244, "err" : 0.000079}
+},
+{
+	"L" : 12,
+	"nStep" : 30,
+	"magnetization" : {"val" : 0.121646, "err" : 0.000879},
+	"mag_sq" : {"val" : 0.021864, "err" : 0.000277},
+	"deltaH" : {"val" : 0.068072, "err" : 0.000052}
+},
+{
+	"L" : 12,
+	"nStep" : 35,
+	"magnetization" : {"val" : 0.122593, "err" : 0.000881},
+	"mag_sq" : {"val" : 0.022162, "err" : 0.000278},
+	"deltaH" : {"val" : 0.049968, "err" : 0.000040}
+},
+{
+	"L" : 12,
+	"nStep" : 40,
+	"magnetization" : {"val" : 0.123646, "err" : 0.000930},
+	"mag_sq" : {"val" : 0.022534, "err" : 0.000297},
+	"deltaH" : {"val" : 0.038266, "err" : 0.000031}
+},
+{
+	"L" : 12,
+	"nStep" : 45,
+	"magnetization" : {"val" : 0.124660, "err" : 0.000915},
+	"mag_sq" : {"val" : 0.022862, "err" : 0.000289},
+	"deltaH" : {"val" : 0.030208, "err" : 0.000024}
+},
+{
+	"L" : 12,
+	"nStep" : 50,
+	"magnetization" : {"val" : 0.124380, "err" : 0.000942},
+	"mag_sq" : {"val" : 0.022814, "err" : 0.000301},
+	"deltaH" : {"val" : 0.024470, "err" : 0.000020}
+},
+{
+	"L" : 14,
+	"nStep" : 15,
+	"magnetization" : {"val" : 0.091530, "err" : 0.000669},
+	"mag_sq" : {"val" : 0.012677, "err" : 0.000166},
+	"deltaH" : {"val" : 0.348666, "err" : 0.000274}
+},
+{
+	"L" : 14,
+	"nStep" : 20,
+	"magnetization" : {"val" : 0.094243, "err" : 0.000738},
+	"mag_sq" : {"val" : 0.013446, "err" : 0.000186},
+	"deltaH" : {"val" : 0.193904, "err" : 0.000153}
+},
+{
+	"L" : 14,
+	"nStep" : 25,
+	"magnetization" : {"val" : 0.097912, "err" : 0.000794},
+	"mag_sq" : {"val" : 0.014503, "err" : 0.000211},
+	"deltaH" : {"val" : 0.123647, "err" : 0.000096}
+},
+{
+	"L" : 14,
+	"nStep" : 30,
+	"magnetization" : {"val" : 0.098709, "err" : 0.000771},
+	"mag_sq" : {"val" : 0.014627, "err" : 0.000204},
+	"deltaH" : {"val" : 0.085722, "err" : 0.000070}
+},
+{
+	"L" : 14,
+	"nStep" : 35,
+	"magnetization" : {"val" : 0.099332, "err" : 0.000797},
+	"mag_sq" : {"val" : 0.014820, "err" : 0.000208},
+	"deltaH" : {"val" : 0.062850, "err" : 0.000051}
+},
+{
+	"L" : 14,
+	"nStep" : 40,
+	"magnetization" : {"val" : 0.099941, "err" : 0.000844},
+	"mag_sq" : {"val" : 0.015037, "err" : 0.000226},
+	"deltaH" : {"val" : 0.048182, "err" : 0.000039}
+},
+{
+	"L" : 14,
+	"nStep" : 45,
+	"magnetization" : {"val" : 0.101364, "err" : 0.000824},
+	"mag_sq" : {"val" : 0.015359, "err" : 0.000223},
+	"deltaH" : {"val" : 0.038024, "err" : 0.000030}
+},
+{
+	"L" : 14,
+	"nStep" : 50,
+	"magnetization" : {"val" : 0.099550, "err" : 0.000831},
+	"mag_sq" : {"val" : 0.014942, "err" : 0.000225},
+	"deltaH" : {"val" : 0.030778, "err" : 0.000025}
+}
+]
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4

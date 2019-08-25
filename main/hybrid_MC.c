@@ -7,6 +7,10 @@
 *
 * AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
 * CREATED: 30/05/2019
+<<<<<<< HEAD
+=======
+* MODIFIED: 24/08/2019
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 *
 *******************************************************************************/
 
@@ -28,10 +32,17 @@ int main(int argc, char *argv[])
     /*Declaring the variables */
     int j, accepted, k; /*Counters*/
     double dTAU;        /*Infinitesimal time interval*/
+<<<<<<< HEAD
     double *dH_abs, deltaH, mean_H = 0.0, err_H, mean2_H = 0.0;
     double *expo, mean_expo = 0.0, err_expo, mean2_e = 0.0;
     double *mag2, mean_m2 = 0.0, err_m2, mean2_m2 = 0.0;
     double *mag, mean_m = 0.0, err_m, mean2_m = 0.0;
+=======
+    double *dH, deltaH, mean_H = 0.0, mean2_H = 0.0, err_H;
+    double *expo, mean_expo = 0.0, mean2_expo = 0.0, err_expo;
+    double *mag2, mean_m2 = 0.0, mean2_m2 = 0.0, err_m2;
+    double *mag, mean_m = 0.0, mean2_m = 0.0, err_m;
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
     int nBin; /*Number of bins after the rebinning*/
 
     /*See if the right number of argument is passed in the command line*/
@@ -53,6 +64,7 @@ int main(int argc, char *argv[])
                                     and its value decreases every time the configuration is not accepted*/
 
     dTAU = (double)hmc_params.tlength / hmc_params.nstep;
+<<<<<<< HEAD
     nBin = hmc_params.ntraj / DBIN;
 
     /*Initializing the rebinned vector*/
@@ -102,6 +114,66 @@ int main(int argc, char *argv[])
     err_expo = sqrt((mean2_e-mean_expo*mean_expo)/nBin);
 
     /*Printing all the results (this particular format is useful to write 
+=======
+
+    /*Initializing the rebinned vector*/
+    nBin = hmc_params.ntraj / DBIN;
+    mag = malloc(nBin * sizeof(double));
+    mag2 = malloc(nBin * sizeof(double));
+    dH = malloc(nBin * sizeof(double));
+    expo = malloc(nBin * sizeof(double));
+    mag[0] = 0.0;
+    mag2[0] = 0.0;
+    dH[0] = 0.0;
+    expo[0] = 0.0;
+
+    thermalization(dTAU);
+
+    /*Setting to zero the counter used for the rebinning*/
+    k = 0;
+
+    for (j = 0; j < hmc_params.ntraj; j++)
+    {
+        if (!MolDyn(dTAU, &deltaH))
+            accepted--;
+
+        /*Rebinning: if the index of the loop exceeded the length of a bin,
+        the counter k moves to the next one*/
+        if (j - k * DBIN > DBIN)
+        {
+            /*Computing the mean and the mean of the squares*/
+            mean_m += mag[k] / nBin;
+            mean_m2 += mag2[k] / nBin;
+            mean_expo += expo[k] / nBin;
+            mean_H += dH[k] / nBin;
+            mean2_m += mag[k] * mag[k] / nBin;
+            mean2_m2 += mag2[k] * mag2[k] / nBin;
+            mean2_expo += expo[k] * expo[k] / nBin;
+            mean2_H += dH[k] * dH[k] / nBin;
+
+            /*Update the counter*/
+            k++;
+
+            /*Setting the new entries to zero*/
+            mag[k] = 0.0;
+            mag2[k] = 0.0;
+            dH[k] = 0.0;
+            expo[k] = 0.0;
+        }
+        mag[k] += fabs(magnetization() / V) / nBin;
+        mag2[k] += (magnetization() * magnetization() / (V * V)) / DBIN;
+        dH[k] += fabs(deltaH) / DBIN;
+        expo[k] += exp(-1. * deltaH) / DBIN;
+    }
+
+    /*Estimating the errors*/
+    err_m = sqrt((mean2_m - mean_m * mean_m) / nBin);
+    err_m2 = sqrt((mean2_m2 - mean_m2 * mean_m2) / nBin);
+    err_expo = sqrt((mean2_expo - mean_expo * mean_expo) / nBin);
+    err_H = sqrt((mean2_H - mean_H * mean_H) / nBin);
+
+    /*Printing all the results (this particular formatting is useful to write 
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
     the .json file in the final simulation)*/
     fprintf(stdout, "\t\"L\" : %i,\n", L);
     fprintf(stdout, "\t\"nStep\" : %i,\n", hmc_params.nstep);

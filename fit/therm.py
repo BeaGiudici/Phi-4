@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 # Plotting the results of the action for hot and cold start,
 # in order to find when the chain is thermalized
+=======
+# Plotting the results of the magnetizations for hot and cold start, in order to find Ntherm
+>>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 
 import numpy as np
 import matplotlib.pyplot as plt
