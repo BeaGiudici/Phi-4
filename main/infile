@@ -3,5 +3,5 @@ lambda      1.145
 ntherm      100
 ntraj       1000000
 traj_length 1
-nstep       15
+nstep       10
 seed        112

@@ -8,7 +8,6 @@
 *
 * AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
 * CREATED: 01/06/2019
-* MODIFIED: 24/08/2019
 *
 *******************************************************************************/
 
@@ -102,7 +101,7 @@ int main(int argc, char *argv[])
      fprintf(stdout, "\t\"L\" : %i,\n", L);
      fprintf(stdout, "\t\"nStep\" : %i,\n", hmc_params.nstep);
      fprintf(stdout, "\t\"magnetization\" : {\"val\" : %f, \"err\" : %f},\n", mean_m, err_m);
-     fprintf(stdout, "\t\"mag_sq\" : {\"val\" : %f, \"err\" : %f},\n", mean_m2, err_m2);
+     fprintf(stdout, "\t\"mag_sq\" : {\"val\" : %f, \"err\" : %f}\n", mean_m2, err_m2);
 
      return 0;
 }

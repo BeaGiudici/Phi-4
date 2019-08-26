@@ -7,7 +7,6 @@
 *
 * AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
 * CREATED: 23/05/2019
-* MODIFIED: 29/05/2019
 *
 *******************************************************************************/
 

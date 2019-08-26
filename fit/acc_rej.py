@@ -30,10 +30,13 @@ err = np.array([line["magnetization"]["err"]
 plt.errorbar(x, mag, yerr=err, ls='', marker='.', markersize=1,
              color='r', elinewidth=0.5, capsize=2.5, ecolor='r', label='Without Accept/Reject')
 # Linear fit
-best, covar = curve_fit(f.linear, x, mag, sigma=err, p0=(0.22, 0.1))
+best, covar = curve_fit(f.linear, x, mag, sigma=err, p0=(0.375, -1.0))
 plt.plot(x, f.linear(x, *best), ls='--', c='red', linewidth=0.65)
 deg = len(mag) - len(best) #Here and below: degrees of freedom for the
                            #reduced chi-squared
+
+#Saving the value of the parameter so that it can be used as an estimate in the following fit
+mag_no_AR = best[0]
 
 #Print the results of the fit
 print("WITHOUT ACCEPT/REJECT")
@@ -51,9 +54,10 @@ err = np.array([line["magnetization"]["err"]
 plt.errorbar(x, mag, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b', label='With Accept/Reject')
 # Linear fit
-best, covar = curve_fit(f.constant, x, mag, sigma=err, p0=(0.37544641))
+best, covar = curve_fit(f.constant, x, mag, sigma=err, p0=(mag_no_AR))
 plt.plot(x, f.constant(x, *best), ls='--', c='b', linewidth=0.65)
 deg = len(mag) - len(best)
+
 
 #Print the results of the fit
 print("WITH ACCEPT/REJECT")
@@ -83,9 +87,12 @@ err = np.array([line["mag_sq"]["err"]
 plt.errorbar(x, mag, yerr=err, ls='', marker='.', markersize=1,
              color='r', elinewidth=0.5, capsize=2.5, ecolor='r', label='Without Accept/Reject')
 # Linear fit
-best, covar = curve_fit(f.linear, x, mag, sigma=err, p0=(0.22, 0.1))
+best, covar = curve_fit(f.linear, x, mag, sigma=err, p0=(0.18, -1.0))
 plt.plot(x, f.linear(x, *best), ls='--', c='red', linewidth=0.65)
 deg = len(mag) - len(best)
+
+#Saving the value of the parameter so that it can be used as an estimate in the following fit
+m2_no_AR = best[0]
 
 #Print the results of the fit
 print("WITHOUT ACCEPT/REJECT")
@@ -103,7 +110,7 @@ err = np.array([line["mag_sq"]["err"]
 plt.errorbar(x, mag, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b', label='With Accept/Reject')
 # Linear fit
-best, covar = curve_fit(f.constant, x, mag, sigma=err, p0=(0.18287383))
+best, covar = curve_fit(f.constant, x, mag, sigma=err, p0=(m2_no_AR))
 plt.plot(x, f.constant(x, *best), ls='--', c='b', linewidth=0.65)
 deg = len(mag) - len(best)
 
@@ -132,7 +139,7 @@ err = np.array([line["deltaH"]["err"]
                 for line in filter(lambda item: item["L"] == L, data_AR)])
 plt.errorbar(dT, H, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b')
-# Linear fit
+# Quadratic fit
 best, covar = curve_fit(f.quadratic, dT, H, sigma=err, p0=(1.0, -0.01, 10.))
 y = np.linspace(min(dT), max(dT), 100)
 plt.plot(y, f.quadratic(y, *best), ls='--', c='r', linewidth=0.65)
@@ -162,7 +169,8 @@ plt.errorbar(x, exp, yerr=err, ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b')
 
 # Linear fit
-best, covar = curve_fit(f.constant, x, exp, p0=(1.0), sigma=err)
+best, covar = curve_fit(f.constant, x, exp, p0=(1), sigma=err)
+
 plt.plot(x, f.constant(x, *best), ls='--', c='r', linewidth=0.65)
 deg = len(exp) - len(best)
 
@@ -171,7 +179,7 @@ print('\t EXPONENTIAL \t')
 print('Parameters: ', best)
 print("Parameters' Std Error: ", np.sqrt(np.diag(covar)))
 print('Covariance: ', covar)
-print('Reduced chi-squared: ', f.red_chi_sq(H,
+print('Reduced chi-squared: ', f.red_chi_sq(exp,
                                             f.constant(x, *best), err, dof=deg))
 
 plt.title('Behaviour of the exponential')

@@ -22,7 +22,6 @@
  *   
  *  AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
  *  CREATED: 23/05/2019
- *  MODIFIED: 10/08/2019
  *  
 *******************************************************************************/
 
