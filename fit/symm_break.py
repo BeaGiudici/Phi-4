@@ -1,30 +1,21 @@
-<<<<<<< HEAD
 # Plotting the graphs of different functions versus different values of k
 # and different values of L, in order to find the point of spontaneous symmetry breaking
 
-=======
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 import math
 import matplotlib.pyplot as plt
 import numpy as np
 import json
 import sys
 
-<<<<<<< HEAD
 # The file containing the data is passed as argument. If no argument
 # is given, the standard file is going to be analyzed
 
-=======
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 if len(sys.argv) == 1:
     file = '../results/SB_results.json'
 else:
     file = sys.argv[1]
 
-<<<<<<< HEAD
 # Initializing the different canvas
-=======
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 f1 = plt.figure(1)
 plt.title('Magnetization')
 plt.xlabel('k')
@@ -51,10 +42,6 @@ plt.ylabel(r'$\langle m^2 \rangle / V^2$')
 plt.grid(ls=':')
 
 data = json.load(open(file, 'r'))
-<<<<<<< HEAD
-
-=======
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 for L in range(4, 15, 2):
     k = np.array([line["kappa"]
                   for line in filter(lambda item: item["L"] == L, data)])
@@ -75,11 +62,7 @@ for L in range(4, 15, 2):
     err_b = np.array([line["binder"]["err"]
                       for line in filter(lambda item: item["L"] == L, data)])
 
-<<<<<<< HEAD
     # Plotting the absolute value of the magnetization
-=======
-    # Plotting the magnetization
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
     plt.figure(1)
     plt.errorbar(k, mag, yerr=err_m, ls='-', lw=0.65, marker='.', markersize=1,
                  elinewidth=0.5, capsize=2.5, label='L / a = %i' % L)
@@ -97,20 +80,14 @@ for L in range(4, 15, 2):
                  elinewidth=0.5, capsize=2.5, label='L / a = %i' % L)
     plt.legend()
 
-<<<<<<< HEAD
     # Plotting the squared magnetization
-=======
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
     plt.figure(4)
     plt.errorbar(k, mag2, yerr=err_m2, ls='-', lw=0.65, marker='.', markersize=1,
                  elinewidth=0.5, capsize=2.5, label='L / a = %i' % L)
     plt.legend()
 
-<<<<<<< HEAD
 # The final graphs are saved with different names, depending on the
 # smaller value of k in the data set
-=======
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 if k[0] == 0.18:
     f1.savefig('graphs/magnetization_zoom.png', dpi=(200), bbox_inches='tight')
     f2.savefig('graphs/susceptibility_zoom.png',

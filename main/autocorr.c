@@ -6,7 +6,6 @@
 *
 * AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
 * CREATED: 16/06/2019
-* MODIFIED: 10/08/2019
 *
 ********************************************************************/
 
@@ -30,10 +29,7 @@ int main(int argc, char *argv[])
      int i, j;
      FILE *file;
 
-<<<<<<< HEAD
      /*See if the right number of argument is passed in the command line*/
-=======
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
      if (argc != 3)
      {
           fprintf(stderr, "Number of arguments not correct\n");
@@ -44,10 +40,7 @@ int main(int argc, char *argv[])
      /*Reading the parameters*/
      read_input(argv[1]);
 
-<<<<<<< HEAD
      /*Initializing the generator of random numbers and the matrix hop[][]*/
-=======
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
      rlxd_init(1, seed);
      hopping(hop);
 
