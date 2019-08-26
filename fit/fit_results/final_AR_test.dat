@@ -1,0 +1,46 @@
+	 ABSOLUTE MAGNETIZATION 	
+WITHOUT ACCEPT/REJECT
+Parameters:  [ 0.37495079 -2.03941531]
+Parameters' Std Error:  [0.00017649 0.04371539]
+Covariance:  [[ 3.11491419e-08 -4.97999757e-06]
+ [-4.97999757e-06  1.91103501e-03]]
+Reduced chi-squared:  0.1650241203864357
+
+
+WITH ACCEPT/REJECT
+Parameters:  [0.37543488]
+Parameters' Std Error:  [0.00026105]
+Covariance:  [[6.81469232e-08]]
+Reduced chi-squared:  0.6180936212418628
+
+
+	 SQUARED MAGNETIZATION 	
+WITHOUT ACCEPT/REJECT
+Parameters:  [ 0.18229814 -1.65549127]
+Parameters' Std Error:  [0.0001141  0.02782899]
+Covariance:  [[ 1.30197314e-08 -2.05683737e-06]
+ [-2.05683737e-06  7.74452917e-04]]
+Reduced chi-squared:  0.12131974679284012
+
+
+WITH ACCEPT/REJECT
+Parameters:  [0.18263229]
+Parameters' Std Error:  [0.00019368]
+Covariance:  [[3.75105785e-08]]
+Reduced chi-squared:  0.5935550309917561
+
+
+	 HAMILTONIAN 	
+Parameters:  [ 1.63562456e-04 -1.36036372e-02  1.23104136e+01]
+Parameters' Std Error:  [4.03914320e-05 2.62919415e-03 3.92159093e-02]
+Covariance:  [[ 1.63146778e-09 -1.04904671e-07  1.48351211e-06]
+ [-1.04904671e-07  6.91266188e-06 -1.00693547e-04]
+ [ 1.48351211e-06 -1.00693547e-04  1.53788754e-03]]
+Reduced chi-squared:  1.293687165216785
+
+
+	 EXPONENTIAL 	
+Parameters:  [1.00000526]
+Parameters' Std Error:  [1.51103551e-06]
+Covariance:  [[2.28322832e-12]]
+Reduced chi-squared:  0.36523687550905426
