@@ -137,20 +137,20 @@ H = np.array([line["deltaH"]["val"]
               for line in filter(lambda item: item["L"] == L, data_AR)])
 err = np.array([line["deltaH"]["err"]
                 for line in filter(lambda item: item["L"] == L, data_AR)])
-plt.errorbar(dT, H, yerr=err, ls='', marker='.', markersize=1,
+plt.errorbar(dT[1:], H[1:], yerr=err[1:], ls='', marker='.', markersize=1,
              color='b', elinewidth=0.5, capsize=2.5, ecolor='b')
 # Quadratic fit
-best, covar = curve_fit(f.quadratic, dT, H, sigma=err, p0=(1.0, -0.01, 10.))
-y = np.linspace(min(dT), max(dT), 100)
+best, covar = curve_fit(f.quadratic, dT[1:], H[1:], sigma=err[1:], p0=(1.0, -0.01, 10.))
+y = np.linspace(min(dT[1:]), max(dT[1:]), 100)
 plt.plot(y, f.quadratic(y, *best), ls='--', c='r', linewidth=0.65)
-deg = len(H) - len(best)
+deg = len(H[1:]) - len(best) 
 
 #Print the results of the fit
 print('Parameters: ', best)
 print("Parameters' Std Error: ", np.sqrt(np.diag(covar)))
 print('Covariance: ', covar)
 print('Reduced chi-squared: ',
-      f.red_chi_sq(H, f.quadratic(dT, *best), err, dof=deg))
+      f.red_chi_sq(H[1:], f.quadratic(dT[1:], *best), err[1:], dof=deg))
 print('\n')
 
 plt.title('Variation of the Hamiltonian')
