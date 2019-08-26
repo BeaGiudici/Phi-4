@@ -1,19 +1,11 @@
-<<<<<<< HEAD
 # This program draws the graph of the autocorrelation
 # function for L = 4 and L = 14
-=======
-# This program draws the graph of the autocorrelator
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
 from functions import exponential
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
 fig = plt.figure()
 with open("fit_results/gamma_fit.dat", "w") as f:
 
@@ -21,7 +13,6 @@ with open("fit_results/gamma_fit.dat", "w") as f:
         i, gamma = np.genfromtxt("../results/gamma%i.dat" % L, unpack=True)
         plt.plot(i, gamma, ls='', marker='.',
                  markersize=2.5, label='L / a = %i' % L)
-<<<<<<< HEAD
         # Fitting the curve
         best, covar = curve_fit(exponential, i, gamma, p0=(1, 1))
         par_err = np.sqrt(np.diag(covar))
@@ -29,13 +20,7 @@ with open("fit_results/gamma_fit.dat", "w") as f:
         x = np.linspace(0, len(i), 100)
         plt.plot(x, exponential(x, *best), ls='--', lw=1, c='green')
 
-=======
-        best, covar = curve_fit(exponential, i, gamma, p0=(1, 1))
-        par_err = np.sqrt(np.diag(covar))
-        x = np.linspace(0, len(i), 100)
-        plt.plot(x, exponential(x, *best), ls='--', lw=1, c='green')
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
-        plt.title(r"Autocorrelators")
+        plt.title("Autocorrelation")
         plt.xlabel(r"$i$")
         plt.ylabel(r"$\Gamma$")
         plt.grid(linestyle=':')
@@ -44,12 +29,10 @@ with open("fit_results/gamma_fit.dat", "w") as f:
         plt.text(800, 0.7, r'$k = 0.18169$')
         plt.text(800, 0.6, r'$nStep = 20$')
 
-<<<<<<< HEAD
-        # Writing the results of the fit on a file
-=======
->>>>>>> 16d13066fcae8d7c4cd1975c4b6fa202534775d4
-        f.write('Fit results for L = %i\n' % L)
-        f.write('A = %f +- %f\n' % (best[0], par_err[0]))
-        f.write('TAU = %f +- %f\n\n' % (best[1], par_err[1]))
+# Writing the results of the fit on a file
+
+print('Fit results for L = %i\n' % L)
+print('A = %f +- %f\n' % (best[0], par_err[0]))
+print('TAU = %f +- %f\n\n' % (best[1], par_err[1]))
 
 fig.savefig('graphs/autocorr.png', dpi=(200), bbox_inches='tight')
