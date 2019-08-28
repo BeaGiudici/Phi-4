@@ -1,109 +1,674 @@
 [
 {
+	"L" : 4,
+	"kappa" : 0.180000,
+	"magnetization" : {"val" : 0.358241, "err" : 0.000911},
+	"magnetization2" : {"val" : 0.168936, "err" : 0.000676},
+	"susceptibility" : {"val" : 2.598391, "err" : 0.007105},
+	"binder" : {"val" : 1.819454, "err" : 0.004676}
 },
 {
+	"L" : 4,
+	"kappa" : 0.181000,
+	"magnetization" : {"val" : 0.367995, "err" : 0.000995},
+	"magnetization2" : {"val" : 0.176651, "err" : 0.000749},
+	"susceptibility" : {"val" : 2.638745, "err" : 0.006943},
+	"binder" : {"val" : 1.785035, "err" : 0.004794}
 },
 {
+	"L" : 4,
+	"kappa" : 0.182000,
+	"magnetization" : {"val" : 0.377990, "err" : 0.001005},
+	"magnetization2" : {"val" : 0.184831, "err" : 0.000769},
+	"susceptibility" : {"val" : 2.685125, "err" : 0.007261},
+	"binder" : {"val" : 1.750450, "err" : 0.004598}
 },
 {
+	"L" : 4,
+	"kappa" : 0.183000,
+	"magnetization" : {"val" : 0.387630, "err" : 0.001025},
+	"magnetization2" : {"val" : 0.192892, "err" : 0.000787},
+	"susceptibility" : {"val" : 2.728658, "err" : 0.007593},
+	"binder" : {"val" : 1.721029, "err" : 0.004581}
 },
 {
+	"L" : 4,
+	"kappa" : 0.184000,
+	"magnetization" : {"val" : 0.397841, "err" : 0.001083},
+	"magnetization2" : {"val" : 0.201460, "err" : 0.000840},
+	"susceptibility" : {"val" : 2.763639, "err" : 0.007874},
+	"binder" : {"val" : 1.689143, "err" : 0.004654}
 },
 {
+	"L" : 4,
+	"kappa" : 0.185000,
+	"magnetization" : {"val" : 0.410874, "err" : 0.001050},
+	"magnetization2" : {"val" : 0.212100, "err" : 0.000827},
+	"susceptibility" : {"val" : 2.770104, "err" : 0.007984},
+	"binder" : {"val" : 1.645091, "err" : 0.004226}
 },
 {
+	"L" : 4,
+	"kappa" : 0.186000,
+	"magnetization" : {"val" : 0.421994, "err" : 0.001055},
+	"magnetization2" : {"val" : 0.221794, "err" : 0.000847},
+	"susceptibility" : {"val" : 2.797769, "err" : 0.008910},
+	"binder" : {"val" : 1.614027, "err" : 0.004071}
 },
 {
+	"L" : 4,
+	"kappa" : 0.186500,
+	"magnetization" : {"val" : 0.426745, "err" : 0.001052},
+	"magnetization2" : {"val" : 0.226066, "err" : 0.000844},
+	"susceptibility" : {"val" : 2.813093, "err" : 0.009030},
+	"binder" : {"val" : 1.602762, "err" : 0.004009}
 },
 {
+	"L" : 4,
+	"kappa" : 0.187000,
+	"magnetization" : {"val" : 0.431778, "err" : 0.001031},
+	"magnetization2" : {"val" : 0.230383, "err" : 0.000840},
+	"susceptibility" : {"val" : 2.812835, "err" : 0.008669},
+	"binder" : {"val" : 1.587954, "err" : 0.003769}
 },
 {
+	"L" : 4,
+	"kappa" : 0.187500,
+	"magnetization" : {"val" : 0.438226, "err" : 0.001068},
+	"magnetization2" : {"val" : 0.236153, "err" : 0.000871},
+	"susceptibility" : {"val" : 2.823091, "err" : 0.009569},
+	"binder" : {"val" : 1.571126, "err" : 0.003886}
 },
 {
+	"L" : 4,
+	"kappa" : 0.188000,
+	"magnetization" : {"val" : 0.443556, "err" : 0.001072},
+	"magnetization2" : {"val" : 0.240897, "err" : 0.000881},
+	"susceptibility" : {"val" : 2.825923, "err" : 0.009557},
+	"binder" : {"val" : 1.557119, "err" : 0.003773}
 },
 {
+	"L" : 4,
+	"kappa" : 0.189000,
+	"magnetization" : {"val" : 0.453749, "err" : 0.001101},
+	"magnetization2" : {"val" : 0.250193, "err" : 0.000910},
+	"susceptibility" : {"val" : 2.835504, "err" : 0.010483},
+	"binder" : {"val" : 1.531940, "err" : 0.003767}
 },
 {
+	"L" : 4,
+	"kappa" : 0.190000,
+	"magnetization" : {"val" : 0.467325, "err" : 0.001106},
+	"magnetization2" : {"val" : 0.262558, "err" : 0.000926},
+	"susceptibility" : {"val" : 2.826554, "err" : 0.011231},
+	"binder" : {"val" : 1.498676, "err" : 0.003605}
 },
 {
+	"L" : 4,
+	"kappa" : 0.191000,
+	"magnetization" : {"val" : 0.479506, "err" : 0.001114},
+	"magnetization2" : {"val" : 0.273797, "err" : 0.000953},
+	"susceptibility" : {"val" : 2.807705, "err" : 0.011571},
+	"binder" : {"val" : 1.470197, "err" : 0.003449}
 },
 {
+	"L" : 6,
+	"kappa" : 0.180000,
+	"magnetization" : {"val" : 0.251847, "err" : 0.001021},
+	"magnetization2" : {"val" : 0.086842, "err" : 0.000570},
+	"susceptibility" : {"val" : 5.057756, "err" : 0.022484},
+	"binder" : {"val" : 2.001306, "err" : 0.008119}
 },
 {
+	"L" : 6,
+	"kappa" : 0.181000,
+	"magnetization" : {"val" : 0.265248, "err" : 0.001095},
+	"magnetization2" : {"val" : 0.094778, "err" : 0.000621},
+	"susceptibility" : {"val" : 5.275142, "err" : 0.022141},
+	"binder" : {"val" : 1.927746, "err" : 0.008015}
 },
 {
+	"L" : 6,
+	"kappa" : 0.182000,
+	"magnetization" : {"val" : 0.276672, "err" : 0.001165},
+	"magnetization2" : {"val" : 0.102231, "err" : 0.000682},
+	"susceptibility" : {"val" : 5.547580, "err" : 0.023446},
+	"binder" : {"val" : 1.886615, "err" : 0.008027}
 },
 {
+	"L" : 6,
+	"kappa" : 0.183000,
+	"magnetization" : {"val" : 0.292406, "err" : 0.001169},
+	"magnetization2" : {"val" : 0.112211, "err" : 0.000704},
+	"susceptibility" : {"val" : 5.769335, "err" : 0.024307},
+	"binder" : {"val" : 1.813627, "err" : 0.007362}
 },
 {
+	"L" : 6,
+	"kappa" : 0.184000,
+	"magnetization" : {"val" : 0.307869, "err" : 0.001235},
+	"magnetization2" : {"val" : 0.122329, "err" : 0.000769},
+	"susceptibility" : {"val" : 5.949876, "err" : 0.024585},
+	"binder" : {"val" : 1.749587, "err" : 0.006979}
 },
 {
+	"L" : 6,
+	"kappa" : 0.185000,
+	"magnetization" : {"val" : 0.321009, "err" : 0.001339},
+	"magnetization2" : {"val" : 0.131437, "err" : 0.000849},
+	"susceptibility" : {"val" : 6.132378, "err" : 0.026335},
+	"binder" : {"val" : 1.702743, "err" : 0.007068}
 },
 {
+	"L" : 6,
+	"kappa" : 0.186000,
+	"magnetization" : {"val" : 0.341728, "err" : 0.001324},
+	"magnetization2" : {"val" : 0.145577, "err" : 0.000863},
+	"susceptibility" : {"val" : 6.220599, "err" : 0.029760},
+	"binder" : {"val" : 1.623785, "err" : 0.006293}
 },
 {
+	"L" : 6,
+	"kappa" : 0.186500,
+	"magnetization" : {"val" : 0.349303, "err" : 0.001350},
+	"magnetization2" : {"val" : 0.151159, "err" : 0.000884},
+	"susceptibility" : {"val" : 6.295665, "err" : 0.030458},
+	"binder" : {"val" : 1.599754, "err" : 0.006315}
 },
 {
+	"L" : 6,
+	"kappa" : 0.187000,
+	"magnetization" : {"val" : 0.357704, "err" : 0.001354},
+	"magnetization2" : {"val" : 0.157341, "err" : 0.000907},
+	"susceptibility" : {"val" : 6.347985, "err" : 0.033481},
+	"binder" : {"val" : 1.574168, "err" : 0.005954}
 },
 {
+	"L" : 6,
+	"kappa" : 0.187500,
+	"magnetization" : {"val" : 0.367796, "err" : 0.001357},
+	"magnetization2" : {"val" : 0.164706, "err" : 0.000914},
+	"susceptibility" : {"val" : 6.357333, "err" : 0.035210},
+	"binder" : {"val" : 1.542242, "err" : 0.005774}
 },
 {
+	"L" : 6,
+	"kappa" : 0.188000,
+	"magnetization" : {"val" : 0.377152, "err" : 0.001399},
+	"magnetization2" : {"val" : 0.171757, "err" : 0.000960},
+	"susceptibility" : {"val" : 6.374819, "err" : 0.036047},
+	"binder" : {"val" : 1.515662, "err" : 0.005674}
 },
 {
+	"L" : 6,
+	"kappa" : 0.189000,
+	"magnetization" : {"val" : 0.396968, "err" : 0.001392},
+	"magnetization2" : {"val" : 0.186878, "err" : 0.000982},
+	"susceptibility" : {"val" : 6.327550, "err" : 0.041895},
+	"binder" : {"val" : 1.460250, "err" : 0.005114}
 },
 {
+	"L" : 6,
+	"kappa" : 0.190000,
+	"magnetization" : {"val" : 0.418537, "err" : 0.001301},
+	"magnetization2" : {"val" : 0.203478, "err" : 0.000941},
+	"susceptibility" : {"val" : 6.113909, "err" : 0.045711},
+	"binder" : {"val" : 1.401953, "err" : 0.004428}
 },
 {
+	"L" : 6,
+	"kappa" : 0.191000,
+	"magnetization" : {"val" : 0.439216, "err" : 0.001328},
+	"magnetization2" : {"val" : 0.220255, "err" : 0.000991},
+	"susceptibility" : {"val" : 5.906419, "err" : 0.050584},
+	"binder" : {"val" : 1.354834, "err" : 0.004083}
 },
 {
+	"L" : 8,
+	"kappa" : 0.180000,
+	"magnetization" : {"val" : 0.183629, "err" : 0.000940},
+	"magnetization2" : {"val" : 0.048102, "err" : 0.000416},
+	"susceptibility" : {"val" : 7.363806, "err" : 0.050269},
+	"binder" : {"val" : 2.213678, "err" : 0.011156}
 },
 {
+	"L" : 8,
+	"kappa" : 0.181000,
+	"magnetization" : {"val" : 0.195946, "err" : 0.001024},
+	"magnetization2" : {"val" : 0.053889, "err" : 0.000467},
+	"susceptibility" : {"val" : 7.933283, "err" : 0.051572},
+	"binder" : {"val" : 2.128156, "err" : 0.011181}
 },
 {
+	"L" : 8,
+	"kappa" : 0.182000,
+	"magnetization" : {"val" : 0.210237, "err" : 0.001154},
+	"magnetization2" : {"val" : 0.061046, "err" : 0.000542},
+	"susceptibility" : {"val" : 8.625285, "err" : 0.052665},
+	"binder" : {"val" : 2.043742, "err" : 0.011369}
 },
 {
+	"L" : 8,
+	"kappa" : 0.183000,
+	"magnetization" : {"val" : 0.226587, "err" : 0.001196},
+	"magnetization2" : {"val" : 0.069477, "err" : 0.000588},
+	"susceptibility" : {"val" : 9.285156, "err" : 0.054195},
+	"binder" : {"val" : 1.943723, "err" : 0.010419}
 },
 {
+	"L" : 8,
+	"kappa" : 0.184000,
+	"magnetization" : {"val" : 0.247003, "err" : 0.001305},
+	"magnetization2" : {"val" : 0.080513, "err" : 0.000671},
+	"susceptibility" : {"val" : 9.985252, "err" : 0.056374},
+	"binder" : {"val" : 1.840170, "err" : 0.009852}
 },
 {
+	"L" : 8,
+	"kappa" : 0.185000,
+	"magnetization" : {"val" : 0.267538, "err" : 0.001433},
+	"magnetization2" : {"val" : 0.092340, "err" : 0.000764},
+	"susceptibility" : {"val" : 10.631138, "err" : 0.059339},
+	"binder" : {"val" : 1.744089, "err" : 0.009557}
 },
 {
+	"L" : 8,
+	"kappa" : 0.186000,
+	"magnetization" : {"val" : 0.293859, "err" : 0.001450},
+	"magnetization2" : {"val" : 0.107971, "err" : 0.000816},
+	"susceptibility" : {"val" : 11.068335, "err" : 0.068367},
+	"binder" : {"val" : 1.632172, "err" : 0.008101}
 },
 {
+	"L" : 8,
+	"kappa" : 0.186500,
+	"magnetization" : {"val" : 0.303901, "err" : 0.001494},
+	"magnetization2" : {"val" : 0.114027, "err" : 0.000852},
+	"susceptibility" : {"val" : 11.095906, "err" : 0.074816},
+	"binder" : {"val" : 1.593626, "err" : 0.008011}
 },
 {
+	"L" : 8,
+	"kappa" : 0.187000,
+	"magnetization" : {"val" : 0.315892, "err" : 0.001545},
+	"magnetization2" : {"val" : 0.121677, "err" : 0.000902},
+	"susceptibility" : {"val" : 11.207505, "err" : 0.079878},
+	"binder" : {"val" : 1.549057, "err" : 0.007634}
 },
 {
+	"L" : 8,
+	"kappa" : 0.187500,
+	"magnetization" : {"val" : 0.331043, "err" : 0.001542},
+	"magnetization2" : {"val" : 0.131612, "err" : 0.000916},
+	"susceptibility" : {"val" : 11.275790, "err" : 0.090783},
+	"binder" : {"val" : 1.499458, "err" : 0.007140}
 },
 {
+	"L" : 8,
+	"kappa" : 0.188000,
+	"magnetization" : {"val" : 0.346445, "err" : 0.001497},
+	"magnetization2" : {"val" : 0.141459, "err" : 0.000918},
+	"susceptibility" : {"val" : 10.974453, "err" : 0.097561},
+	"binder" : {"val" : 1.447853, "err" : 0.006353}
 },
 {
+	"L" : 8,
+	"kappa" : 0.189000,
+	"magnetization" : {"val" : 0.372952, "err" : 0.001545},
+	"magnetization2" : {"val" : 0.160119, "err" : 0.000985},
+	"susceptibility" : {"val" : 10.765210, "err" : 0.119476},
+	"binder" : {"val" : 1.376085, "err" : 0.005810}
 },
 {
+	"L" : 8,
+	"kappa" : 0.190000,
+	"magnetization" : {"val" : 0.399693, "err" : 0.001399},
+	"magnetization2" : {"val" : 0.179421, "err" : 0.000935},
+	"susceptibility" : {"val" : 10.069232, "err" : 0.124895},
+	"binder" : {"val" : 1.310857, "err" : 0.004634}
 },
 {
+	"L" : 8,
+	"kappa" : 0.191000,
+	"magnetization" : {"val" : 0.426842, "err" : 0.001374},
+	"magnetization2" : {"val" : 0.200234, "err" : 0.000953},
+	"susceptibility" : {"val" : 9.236441, "err" : 0.139468},
+	"binder" : {"val" : 1.254313, "err" : 0.004084}
 },
 {
+	"L" : 10,
+	"kappa" : 0.180000,
+	"magnetization" : {"val" : 0.137891, "err" : 0.000834},
+	"magnetization2" : {"val" : 0.027831, "err" : 0.000294},
+	"susceptibility" : {"val" : 8.816692, "err" : 0.081288},
+	"binder" : {"val" : 2.388650, "err" : 0.014796}
 },
 {
+	"L" : 10,
+	"kappa" : 0.181000,
+	"magnetization" : {"val" : 0.147589, "err" : 0.000943},
+	"magnetization2" : {"val" : 0.031578, "err" : 0.000345},
+	"susceptibility" : {"val" : 9.795698, "err" : 0.088323},
+	"binder" : {"val" : 2.324038, "err" : 0.015315}
 },
 {
+	"L" : 10,
+	"kappa" : 0.182000,
+	"magnetization" : {"val" : 0.164146, "err" : 0.001086},
+	"magnetization2" : {"val" : 0.038118, "err" : 0.000421},
+	"susceptibility" : {"val" : 11.174281, "err" : 0.092877},
+	"binder" : {"val" : 2.178597, "err" : 0.014205}
 },
 {
+	"L" : 10,
+	"kappa" : 0.183000,
+	"magnetization" : {"val" : 0.180642, "err" : 0.001236},
+	"magnetization2" : {"val" : 0.045362, "err" : 0.000509},
+	"susceptibility" : {"val" : 12.730392, "err" : 0.101207},
+	"binder" : {"val" : 2.076897, "err" : 0.014218}
 },
 {
+	"L" : 10,
+	"kappa" : 0.184000,
+	"magnetization" : {"val" : 0.202963, "err" : 0.001304},
+	"magnetization2" : {"val" : 0.055519, "err" : 0.000572},
+	"susceptibility" : {"val" : 14.324971, "err" : 0.103052},
+	"binder" : {"val" : 1.923641, "err" : 0.012539}
 },
 {
+	"L" : 10,
+	"kappa" : 0.185000,
+	"magnetization" : {"val" : 0.226924, "err" : 0.001528},
+	"magnetization2" : {"val" : 0.067308, "err" : 0.000709},
+	"susceptibility" : {"val" : 15.813787, "err" : 0.110179},
+	"binder" : {"val" : 1.799139, "err" : 0.012239}
 },
 {
+	"L" : 10,
+	"kappa" : 0.186000,
+	"magnetization" : {"val" : 0.254466, "err" : 0.001657},
+	"magnetization2" : {"val" : 0.081673, "err" : 0.000817},
+	"susceptibility" : {"val" : 16.919737, "err" : 0.129826},
+	"binder" : {"val" : 1.662255, "err" : 0.010951}
 },
 {
+	"L" : 10,
+	"kappa" : 0.186500,
+	"magnetization" : {"val" : 0.272068, "err" : 0.001643},
+	"magnetization2" : {"val" : 0.091061, "err" : 0.000838},
+	"susceptibility" : {"val" : 17.039894, "err" : 0.149960},
+	"binder" : {"val" : 1.580267, "err" : 0.009681}
 },
 {
+	"L" : 10,
+	"kappa" : 0.187000,
+	"magnetization" : {"val" : 0.287312, "err" : 0.001680},
+	"magnetization2" : {"val" : 0.099937, "err" : 0.000884},
+	"susceptibility" : {"val" : 17.389297, "err" : 0.162525},
+	"binder" : {"val" : 1.527150, "err" : 0.008994}
 },
 {
+	"L" : 10,
+	"kappa" : 0.187500,
+	"magnetization" : {"val" : 0.302585, "err" : 0.001760},
+	"magnetization2" : {"val" : 0.109008, "err" : 0.000950},
+	"susceptibility" : {"val" : 17.450836, "err" : 0.185761},
+	"binder" : {"val" : 1.473636, "err" : 0.008662}
 },
 {
+	"L" : 10,
+	"kappa" : 0.188000,
+	"magnetization" : {"val" : 0.323204, "err" : 0.001666},
+	"magnetization2" : {"val" : 0.121460, "err" : 0.000938},
+	"susceptibility" : {"val" : 16.999168, "err" : 0.207643},
+	"binder" : {"val" : 1.405172, "err" : 0.007285}
 },
 {
+	"L" : 10,
+	"kappa" : 0.189000,
+	"magnetization" : {"val" : 0.357964, "err" : 0.001611},
+	"magnetization2" : {"val" : 0.144039, "err" : 0.000962},
+	"susceptibility" : {"val" : 15.900948, "err" : 0.247754},
+	"binder" : {"val" : 1.311664, "err" : 0.005964}
 },
+{
+	"L" : 10,
+	"kappa" : 0.190000,
+	"magnetization" : {"val" : 0.392888, "err" : 0.001448},
+	"magnetization2" : {"val" : 0.168099, "err" : 0.000919},
+	"susceptibility" : {"val" : 13.737835, "err" : 0.272651},
+	"binder" : {"val" : 1.231445, "err" : 0.004590}
+},
+{
+	"L" : 10,
+	"kappa" : 0.191000,
+	"magnetization" : {"val" : 0.428397, "err" : 0.001333},
+	"magnetization2" : {"val" : 0.194801, "err" : 0.000903},
+	"susceptibility" : {"val" : 11.277129, "err" : 0.290704},
+	"binder" : {"val" : 1.167331, "err" : 0.003595}
+},
+{
+	"L" : 12,
+	"kappa" : 0.180000,
+	"magnetization" : {"val" : 0.107754, "err" : 0.000765},
+	"magnetization2" : {"val" : 0.017412, "err" : 0.000224},
+	"susceptibility" : {"val" : 10.024864, "err" : 0.120058},
+	"binder" : {"val" : 2.570832, "err" : 0.019197}
+},
+{
+	"L" : 12,
+	"kappa" : 0.181000,
+	"magnetization" : {"val" : 0.117076, "err" : 0.000886},
+	"magnetization2" : {"val" : 0.020432, "err" : 0.000276},
+	"susceptibility" : {"val" : 11.620846, "err" : 0.143034},
+	"binder" : {"val" : 2.499753, "err" : 0.019709}
+},
+{
+	"L" : 12,
+	"kappa" : 0.182000,
+	"magnetization" : {"val" : 0.130122, "err" : 0.001051},
+	"magnetization2" : {"val" : 0.024810, "err" : 0.000347},
+	"susceptibility" : {"val" : 13.614256, "err" : 0.161543},
+	"binder" : {"val" : 2.387539, "err" : 0.019563}
+},
+{
+	"L" : 12,
+	"kappa" : 0.183000,
+	"magnetization" : {"val" : 0.147146, "err" : 0.001201},
+	"magnetization2" : {"val" : 0.030906, "err" : 0.000426},
+	"susceptibility" : {"val" : 15.990565, "err" : 0.173874},
+	"binder" : {"val" : 2.223947, "err" : 0.018241}
+},
+{
+	"L" : 12,
+	"kappa" : 0.184000,
+	"magnetization" : {"val" : 0.168156, "err" : 0.001397},
+	"magnetization2" : {"val" : 0.039105, "err" : 0.000536},
+	"susceptibility" : {"val" : 18.711026, "err" : 0.184353},
+	"binder" : {"val" : 2.060909, "err" : 0.016832}
+},
+{
+	"L" : 12,
+	"kappa" : 0.185000,
+	"magnetization" : {"val" : 0.196743, "err" : 0.001601},
+	"magnetization2" : {"val" : 0.051303, "err" : 0.000661},
+	"susceptibility" : {"val" : 21.764110, "err" : 0.193764},
+	"binder" : {"val" : 1.851382, "err" : 0.015124}
+},
+{
+	"L" : 12,
+	"kappa" : 0.186000,
+	"magnetization" : {"val" : 0.232454, "err" : 0.001734},
+	"magnetization2" : {"val" : 0.067832, "err" : 0.000781},
+	"susceptibility" : {"val" : 23.840442, "err" : 0.226893},
+	"binder" : {"val" : 1.652688, "err" : 0.012509}
+},
+{
+	"L" : 12,
+	"kappa" : 0.186500,
+	"magnetization" : {"val" : 0.249226, "err" : 0.001778},
+	"magnetization2" : {"val" : 0.076358, "err" : 0.000823},
+	"susceptibility" : {"val" : 24.614910, "err" : 0.254565},
+	"binder" : {"val" : 1.575903, "err" : 0.011650}
+},
+{
+	"L" : 12,
+	"kappa" : 0.187000,
+	"magnetization" : {"val" : 0.269273, "err" : 0.001814},
+	"magnetization2" : {"val" : 0.086819, "err" : 0.000886},
+	"susceptibility" : {"val" : 24.730662, "err" : 0.295829},
+	"binder" : {"val" : 1.495054, "err" : 0.010167}
+},
+{
+	"L" : 12,
+	"kappa" : 0.187500,
+	"magnetization" : {"val" : 0.291399, "err" : 0.001816},
+	"magnetization2" : {"val" : 0.098941, "err" : 0.000926},
+	"susceptibility" : {"val" : 24.239157, "err" : 0.354000},
+	"binder" : {"val" : 1.415186, "err" : 0.008821}
+},
+{
+	"L" : 12,
+	"kappa" : 0.188000,
+	"magnetization" : {"val" : 0.313656, "err" : 0.001792},
+	"magnetization2" : {"val" : 0.111855, "err" : 0.000954},
+	"susceptibility" : {"val" : 23.284590, "err" : 0.411570},
+	"binder" : {"val" : 1.344867, "err" : 0.007693}
+},
+{
+	"L" : 12,
+	"kappa" : 0.189000,
+	"magnetization" : {"val" : 0.356298, "err" : 0.001647},
+	"magnetization2" : {"val" : 0.138566, "err" : 0.000943},
+	"susceptibility" : {"val" : 20.075105, "err" : 0.490913},
+	"binder" : {"val" : 1.235962, "err" : 0.005745}
+},
+{
+	"L" : 12,
+	"kappa" : 0.190000,
+	"magnetization" : {"val" : 0.398203, "err" : 0.001268},
+	"magnetization2" : {"val" : 0.167334, "err" : 0.000828},
+	"susceptibility" : {"val" : 15.151693, "err" : 0.402671},
+	"binder" : {"val" : 1.154493, "err" : 0.003456}
+},
+{
+	"L" : 12,
+	"kappa" : 0.191000,
+	"magnetization" : {"val" : 0.432357, "err" : 0.001057},
+	"magnetization2" : {"val" : 0.193430, "err" : 0.000738},
+	"susceptibility" : {"val" : 11.227576, "err" : 0.398958},
+	"binder" : {"val" : 1.105285, "err" : 0.002493}
+},
+{
+	"L" : 14,
+	"kappa" : 0.180000,
+	"magnetization" : {"val" : 0.086215, "err" : 0.000636},
+	"magnetization2" : {"val" : 0.011342, "err" : 0.000153},
+	"susceptibility" : {"val" : 10.725520, "err" : 0.141438},
+	"binder" : {"val" : 2.697479, "err" : 0.022359}
+},
+{
+	"L" : 14,
+	"kappa" : 0.181000,
+	"magnetization" : {"val" : 0.094215, "err" : 0.000731},
+	"magnetization2" : {"val" : 0.013406, "err" : 0.000188},
+	"susceptibility" : {"val" : 12.430213, "err" : 0.162042},
+	"binder" : {"val" : 2.599892, "err" : 0.020696}
+},
+{
+	"L" : 14,
+	"kappa" : 0.182000,
+	"magnetization" : {"val" : 0.106213, "err" : 0.000916},
+	"magnetization2" : {"val" : 0.016774, "err" : 0.000258},
+	"susceptibility" : {"val" : 15.072024, "err" : 0.210674},
+	"binder" : {"val" : 2.500559, "err" : 0.021996}
+},
+{
+	"L" : 14,
+	"kappa" : 0.183000,
+	"magnetization" : {"val" : 0.121575, "err" : 0.001067},
+	"magnetization2" : {"val" : 0.021446, "err" : 0.000319},
+	"susceptibility" : {"val" : 18.290937, "err" : 0.223946},
+	"binder" : {"val" : 2.324686, "err" : 0.021712}
+},
+{
+	"L" : 14,
+	"kappa" : 0.184000,
+	"magnetization" : {"val" : 0.142015, "err" : 0.001316},
+	"magnetization2" : {"val" : 0.028364, "err" : 0.000435},
+	"susceptibility" : {"val" : 22.490077, "err" : 0.262814},
+	"binder" : {"val" : 2.152541, "err" : 0.020493}
+},
+{
+	"L" : 14,
+	"kappa" : 0.185000,
+	"magnetization" : {"val" : 0.169221, "err" : 0.001577},
+	"magnetization2" : {"val" : 0.038706, "err" : 0.000574},
+	"susceptibility" : {"val" : 27.631889, "err" : 0.277083},
+	"binder" : {"val" : 1.939798, "err" : 0.018360}
+},
+{
+	"L" : 14,
+	"kappa" : 0.186000,
+	"magnetization" : {"val" : 0.207773, "err" : 0.001817},
+	"magnetization2" : {"val" : 0.055004, "err" : 0.000741},
+	"susceptibility" : {"val" : 32.473236, "err" : 0.345653},
+	"binder" : {"val" : 1.698157, "err" : 0.015087}
+},
+{
+	"L" : 14,
+	"kappa" : 0.186500,
+	"magnetization" : {"val" : 0.228609, "err" : 0.001921},
+	"magnetization2" : {"val" : 0.064579, "err" : 0.000821},
+	"susceptibility" : {"val" : 33.796626, "err" : 0.404423},
+	"binder" : {"val" : 1.591798, "err" : 0.013824}
+},
+{
+	"L" : 14,
+	"kappa" : 0.187000,
+	"magnetization" : {"val" : 0.252190, "err" : 0.001904},
+	"magnetization2" : {"val" : 0.075719, "err" : 0.000864},
+	"susceptibility" : {"val" : 33.256049, "err" : 0.481111},
+	"binder" : {"val" : 1.481115, "err" : 0.011371}
+},
+{
+	"L" : 14,
+	"kappa" : 0.187500,
+	"magnetization" : {"val" : 0.280655, "err" : 0.001909},
+	"magnetization2" : {"val" : 0.090605, "err" : 0.000917},
+	"susceptibility" : {"val" : 32.482074, "err" : 0.604053},
+	"binder" : {"val" : 1.375826, "err" : 0.009490}
+},
+{
+	"L" : 14,
+	"kappa" : 0.188000,
+	"magnetization" : {"val" : 0.309144, "err" : 0.001798},
+	"magnetization2" : {"val" : 0.106166, "err" : 0.000919},
+	"susceptibility" : {"val" : 29.076057, "err" : 0.706814},
+	"binder" : {"val" : 1.284159, "err" : 0.007481}
+},
+{
+	"L" : 14,
+	"kappa" : 0.189000,
+	"magnetization" : {"val" : 0.354612, "err" : 0.001587},
+	"magnetization2" : {"val" : 0.134433, "err" : 0.000894},
+	"susceptibility" : {"val" : 23.826137, "err" : 0.786194},
+	"binder" : {"val" : 1.184092, "err" : 0.005263}
+},
+{
+	"L" : 14,
+	"kappa" : 0.190000,
+	"magnetization" : {"val" : 0.400173, "err" : 0.001002},
+	"magnetization2" : {"val" : 0.165558, "err" : 0.000673},
+	"susceptibility" : {"val" : 14.872688, "err" : 0.493259},
+	"binder" : {"val" : 1.103962, "err" : 0.002445}
+},
+{
+	"L" : 14,
+	"kappa" : 0.191000,
+	"magnetization" : {"val" : 0.432817, "err" : 0.000718},
+	"magnetization2" : {"val" : 0.191228, "err" : 0.000550},
+	"susceptibility" : {"val" : 10.694659, "err" : 0.298919},
+	"binder" : {"val" : 1.070317, "err" : 0.001390}
+}
+]
