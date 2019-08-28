@@ -7,7 +7,7 @@
 /* Dimension of the lattice */
 #define D 3
 /* spatial extend of the lattice */
-#define L 14
+#define L 8
 /* lattice volume, needs to be adjusted according to number of dimensions*/
 #define V (L * L * L)
 
