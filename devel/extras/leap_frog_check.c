@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
     double dTAU; /*Infinitesimal time interval*/
     double phi_in[V];
     double H_in, H_fin, deltaH, d_field = 0, max_d = 0;
+
     if (argc != 2)
     {
         fprintf(stderr, "Number of arguments not correct\n");
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    /*Reading the parameters*/
+    /*Reading the parameters and initializing the random number generator*/
     read_input(argv[1]);
     rlxd_init(1, seed);
 

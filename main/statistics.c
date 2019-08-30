@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
      s = malloc(nBin * sizeof(double));
      bnd = malloc(nBin * sizeof(double));
 
-     /*Initializing the means to zero*/
+     /*Initializing the mean values to zero*/
      res.mag.value = 0.0;
      res.mag2.value = 0.0;
      res.sus.value = 0.0;

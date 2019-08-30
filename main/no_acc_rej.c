@@ -4,7 +4,7 @@
 *
 * This program uses the hybrid Monte Carlo, without the accept/reject algorithm,
 * in order to compute the magnetization; this will be compared with the same
-* quantity calculated with hybrid_MC.c (that uses the accept/reject algorithm)
+* quantity calculated with hybrid_MC.c (that uses the accept/reject routine)
 *
 * AUTHOR: Beatrice Giudici <b.giudici1@campus.unimib.it>
 * CREATED: 01/06/2019

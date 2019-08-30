@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
     /*Reading the parameters from file */
     read_input(argv[1]);
 
+    /*Initializing the matrix hop[][]*/
     hopping(hop);
 
     /*Initializing the random generator and the initial field*/

@@ -1,5 +1,5 @@
 # Comparing the magnetization and the Hamiltonian, computed with and without the
-# accept/reject algorithm at a fixed spatial extend of the lattice.
+# accept/reject routine at a fixed spatial extend of the lattice.
 # At the end, there is also a study of the acceptance probability of the accept/reject method
 
 import math

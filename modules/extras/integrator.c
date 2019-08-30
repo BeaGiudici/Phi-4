@@ -43,6 +43,7 @@ double force(int i)
      double lambda = act_params.lambda;
      int mu;
 
+     /*Summing all the fileds in positive and negative directions*/
      for (mu = 0; mu < D; mu++)
      {
           phi_pos += phi[hop[i][mu]];
@@ -98,6 +99,7 @@ bool MolDyn(double tau, double *deltaH)
 
      dH = hamiltonian() - H_in;
 
+     /*If a pointer is passes as argument, the value of dH is assigned to the pointed variable*/
      if (deltaH != NULL)
      {
           *deltaH = dH;
@@ -106,6 +108,7 @@ bool MolDyn(double tau, double *deltaH)
      /*Accept / Reject*/
 
      ranlxd(r, 1);
+     /*If dH > 0 or, if dH < 0, exp(-dH) > r, the new configuration is accepted*/
      if (exp(-1. * dH) < r[0])
      {
           for (i = 0; i < V; i++)

@@ -2,7 +2,7 @@
  * 
  * File initial.c
  * 
- * Collection of functions used for initializing correctly the system
+ * Collection of functions used for initializing the system correctly
  * 
  * The externally accessible functions are
  * 
