@@ -106,7 +106,7 @@ bool MolDyn(double tau, double *deltaH)
      /*Accept / Reject*/
 
      ranlxd(r, 1);
-     if (dH > 0 && exp(-1. * dH) < r[0])
+     if (exp(-1. * dH) < r[0])
      {
           for (i = 0; i < V; i++)
           {
